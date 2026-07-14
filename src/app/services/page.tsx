@@ -107,10 +107,10 @@ export default function ServicesPage() {
               Get Free Consultation
             </Link>
             <a
-              href="tel:+919876543210"
+              href="tel:+919911655010"
               className="rounded-md border border-navy px-6 py-3 text-center text-sm font-semibold text-navy transition-all duration-200 hover:-translate-y-0.5 hover:bg-bg-light"
             >
-              +91 98765 43210
+              +91 99116 55010
             </a>
           </div>
         </Reveal>

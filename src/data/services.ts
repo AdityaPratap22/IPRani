@@ -132,6 +132,34 @@ export const serviceVerticals: ServiceVertical[] = [
           leaf("Startup IP Protection", "startup-ip-protection", "IP Advisory", "Intellectual Property"),
         ],
       },
+      {
+        name: "IP Portfolio Management",
+        slug: "ip-portfolio-management",
+        summary: "We help you strategically manage, monitor, and grow your intellectual property assets.",
+        description: "From renewals to enforcement, our end-to-end portfolio services ensure your IP remains protected, compliant, and aligned with your business goals.",
+        subServices: [
+          leaf("Trademark/Patent Renewals", "renewals", "IP Portfolio Management", "Intellectual Property"),
+          leaf("IP Watch & Monitoring", "watch-monitoring", "IP Portfolio Management", "Intellectual Property"),
+          leaf("Asset Audit & Mapping", "audit-mapping", "IP Portfolio Management", "Intellectual Property"),
+          leaf("Valuation Services", "valuation", "IP Portfolio Management", "Intellectual Property"),
+          leaf("Compliance Monitoring", "compliance", "IP Portfolio Management", "Intellectual Property"),
+          leaf("Annuity Management", "annuity", "IP Portfolio Management", "Intellectual Property"),
+        ],
+      },
+      {
+        name: "IP Prosecution",
+        slug: "ip-prosecution",
+        summary: "We handle end-to-end prosecution of trademarks, patents, copyrights, and designs.",
+        description: "We ensure smooth communication with IP offices, timely responses to objections, and effective representation to secure your rights efficiently and strategically.",
+        subServices: [
+          leaf("Office Action Responses", "office-actions", "IP Prosecution", "Intellectual Property"),
+          leaf("Objection Repliances", "objections", "IP Prosecution", "Intellectual Property"),
+          leaf("IP Office Hearings", "hearings", "IP Prosecution", "Intellectual Property"),
+          leaf("Appeal Filings", "appeals", "IP Prosecution", "Intellectual Property"),
+          leaf("Prosecution Monitoring", "monitoring", "IP Prosecution", "Intellectual Property"),
+          leaf("Strategic Representation", "representation", "IP Prosecution", "Intellectual Property"),
+        ],
+      },
     ],
   },
   {
@@ -279,12 +307,10 @@ export function findSubService(verticalSlug: string, hubSlug: string, subService
 }
 
 export const topServiceLinks = [
-  { label: "Trademark Filing & Drafting", href: "/services/intellectual-property/trademark/filing-drafting" },
+  { label: "Trademark Filing", href: "/services/intellectual-property/trademark/filing-drafting" },
   { label: "Patent Drafting & Filing", href: "/services/intellectual-property/patent/drafting-filing" },
   { label: "Copyright Registration", href: "/services/intellectual-property/copyright/registration" },
-  { label: "Design Drafting & Filing", href: "/services/intellectual-property/design/drafting-filing" },
-  { label: "Private Limited Company Registration", href: "/services/corporate-legal/company-formation/private-limited-company" },
-  { label: "Contract Drafting", href: "/services/corporate-legal/contract-drafting" },
-  { label: "Trademark Opposition", href: "/services/intellectual-property/trademark/opposition" },
-  { label: "Cheque Bounce Cases", href: "/services/litigation/banking-finance/cheque-bounce" },
+  { label: "Design Registration", href: "/services/intellectual-property/design/drafting-filing" },
+  { label: "Company Registration", href: "/services/corporate-legal/company-formation/private-limited-company" },
+  { label: "Litigation & Recovery", href: "/services/litigation" },
 ];

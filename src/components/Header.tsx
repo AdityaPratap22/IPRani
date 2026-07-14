@@ -29,7 +29,6 @@ const simpleLinks = [
 ];
 
 const endLinks = [
-  { label: "Articles", href: "/articles" },
   { label: "Team", href: "/team" },
   { label: "Contact Us", href: "/contact-us" },
 ];
@@ -109,25 +108,83 @@ function KnowledgeCenterMegaMenu() {
   return (
     <motion.div
       {...menuFade}
-      className="absolute left-1/2 top-full w-[min(90vw,560px)] -translate-x-1/2 rounded-xl border border-slate-100 bg-white p-6 shadow-2xl"
+      className="absolute left-1/2 top-full w-[min(90vw,680px)] -translate-x-1/2 rounded-xl border border-slate-100 bg-white p-6 shadow-2xl"
     >
-      <div className="grid grid-cols-2 gap-x-8 gap-y-2.5">
-        {clusters.map((cluster) => (
-          <Link
-            key={cluster.slug}
-            href={`/knowledge-center/${cluster.slug}`}
-            className="inline-block text-sm text-slate-600 transition-all duration-200 hover:translate-x-1 hover:text-brand-blue"
-          >
-            {cluster.name}
-          </Link>
-        ))}
+      <div className="grid grid-cols-12 gap-8 text-left">
+        {/* Column 1: Guides (Left, wider) */}
+        <div className="col-span-8">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            Guides &amp; Handbooks
+          </h4>
+          <div className="mt-4 grid grid-cols-2 gap-x-6 gap-y-3">
+            {clusters.map((cluster) => (
+              <Link
+                key={cluster.slug}
+                href={`/knowledge-center/${cluster.slug}`}
+                className="inline-block text-sm text-slate-600 transition-all duration-200 hover:translate-x-1 hover:text-brand-blue"
+              >
+                {cluster.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Column 2: Additional Resources (Right, narrower) */}
+        <div className="col-span-4 border-l border-slate-100 pl-6">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+            Insights &amp; Resources
+          </h4>
+          <ul className="mt-4 space-y-3.5">
+            <li>
+              <Link
+                href="/blogs"
+                className="group flex flex-col transition-all duration-200 hover:translate-x-1"
+              >
+                <span className="text-sm font-semibold text-navy group-hover:text-brand-blue">
+                  Blogs &amp; Insights
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  3,300+ legal guides and articles
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/case-studies"
+                className="group flex flex-col transition-all duration-200 hover:translate-x-1"
+              >
+                <span className="text-sm font-semibold text-navy group-hover:text-brand-blue">
+                  Case Studies
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  Real client success stories
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/faqs"
+                className="group flex flex-col transition-all duration-200 hover:translate-x-1"
+              >
+                <span className="text-sm font-semibold text-navy group-hover:text-brand-blue">
+                  FAQs
+                </span>
+                <span className="text-[11px] text-slate-400">
+                  Quick legal answers
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="mt-5 border-t border-slate-100 pt-4">
+      
+      <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between">
         <Link
           href="/knowledge-center"
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-all duration-200 hover:gap-2.5 hover:text-brand-blue-dark"
         >
-          View All Guides →
+          Explore Knowledge Center
+          <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
         </Link>
       </div>
     </motion.div>
@@ -371,17 +428,44 @@ export default function Header() {
                       {...accordionCollapse}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      <div className="mt-2 flex flex-col gap-1 border-l border-white/10 pl-3 text-left">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1 block">
+                          Guides &amp; Handbooks
+                        </span>
                         {clusters.map((cluster) => (
                           <Link
                             key={cluster.slug}
                             href={`/knowledge-center/${cluster.slug}`}
                             onClick={() => setOpen(false)}
-                            className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white"
+                            className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
                           >
                             {cluster.name}
                           </Link>
                         ))}
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-3 block">
+                          Insights &amp; Resources
+                        </span>
+                        <Link
+                          href="/knowledge-center"
+                          onClick={() => setOpen(false)}
+                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                        >
+                          Blogs &amp; Insights
+                        </Link>
+                        <Link
+                          href="/case-studies"
+                          onClick={() => setOpen(false)}
+                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                        >
+                          Case Studies
+                        </Link>
+                        <Link
+                          href="/faqs"
+                          onClick={() => setOpen(false)}
+                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                        >
+                          FAQs
+                        </Link>
                       </div>
                     </motion.div>
                   )}

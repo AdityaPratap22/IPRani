@@ -45,7 +45,7 @@ export default async function TeamMemberPage({
             <img
               src={data.image}
               alt={data.name}
-              className="h-72 w-full max-w-sm rounded-2xl object-cover shadow-md transition-transform duration-500 hover:scale-[1.03]"
+              className="h-[450px] w-full max-w-sm rounded-2xl object-cover object-top shadow-md transition-transform duration-500 hover:scale-[1.03]"
             />
             <p className="mt-6 text-sm leading-7 text-slate-600">{data.bio}</p>
 

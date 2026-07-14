@@ -6,14 +6,26 @@ import { PhoneIcon, MailIcon, PinIcon, ClockIcon } from "@/components/icons";
 export const metadata = { title: "Contact Us | IP Rani" };
 
 const contactInfo = [
-  { icon: PhoneIcon, label: "Phone", value: "+91 98765 43210" },
-  { icon: MailIcon, label: "Email", value: "hello@iprani.com" },
+  {
+    icon: PhoneIcon,
+    label: "Phone Support",
+    value: "+91 99116 55010 (General & IP) / +91 97588 67451 (Legal)",
+  },
+  {
+    icon: MailIcon,
+    label: "Email Address",
+    value: "ipr@iprani.com (IP Matters) / legal@iprani.com (Legal Matters)",
+  },
   {
     icon: PinIcon,
-    label: "Office",
-    value: "123, Legal Avenue, Sector 45, Noida, Uttar Pradesh 201301, India",
+    label: "Office Address",
+    value: "Chamber No. 88, Street No. 4, District & Session Court, Surajpur, Greater Noida, Uttar Pradesh – 201306, India",
   },
-  { icon: ClockIcon, label: "Business Hours", value: "Mon - Sat: 9:00 AM - 7:00 PM" },
+  {
+    icon: ClockIcon,
+    label: "Business Hours",
+    value: "Monday to Friday: 10:00 AM – 5:00 PM",
+  },
 ];
 
 export default function ContactPage() {
@@ -131,7 +143,7 @@ export default function ContactPage() {
           <Reveal className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
             <iframe
               title="IP Rani office location"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=77.30%2C28.55%2C77.42%2C28.63&layer=mapnik&marker=28.5906%2C77.36"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.45%2C28.49%2C77.53%2C28.55&layer=mapnik&marker=28.5204%2C77.4912"
               className="h-80 w-full"
               loading="lazy"
             />
@@ -141,8 +153,8 @@ export default function ContactPage() {
 
       <CtaBanner
         title="Need immediate assistance? Call Now"
-        buttonLabel="+91 98765 43210"
-        buttonHref="tel:+919876543210"
+        buttonLabel="+91 99116 55010"
+        buttonHref="tel:+919911655010"
       />
     </>
   );

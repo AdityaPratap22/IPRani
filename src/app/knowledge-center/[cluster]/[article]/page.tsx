@@ -51,34 +51,43 @@ export default async function ArticlePage({
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           <Reveal as="article" className="prose-slate lg:col-span-2">
-            <p className="text-sm leading-7 text-slate-600">
-              {articleData.summary} This guide is part of our{" "}
-              <Link
-                href={`/knowledge-center/${clusterData.slug}`}
-                className="font-semibold text-brand-blue transition-colors hover:text-brand-blue-dark"
-              >
-                {clusterData.name}
-              </Link>
-              , where we cover the full process end-to-end.
-            </p>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              If this applies to your business, our{" "}
-              <Link
-                href={articleData.relatedService.href}
-                className="font-semibold text-brand-blue transition-colors hover:text-brand-blue-dark"
-              >
-                {articleData.relatedService.label}
-              </Link>{" "}
-              service handles this end-to-end — from the first consultation
-              through to filing and follow-up, so you don&apos;t have to
-              navigate the process alone.
-            </p>
-            <p className="mt-4 text-sm leading-7 text-slate-600">
-              Every case is different, so treat this as a starting point
-              rather than a substitute for advice on your specific situation.
-              Our team can review your documents and give you a clear,
-              upfront view of timeline and cost before you commit to anything.
-            </p>
+            {articleData.content ? (
+              <div 
+                className="prose prose-slate max-w-none text-slate-600 leading-7"
+                dangerouslySetInnerHTML={{ __html: articleData.content }}
+              />
+            ) : (
+              <>
+                <p className="text-sm leading-7 text-slate-600">
+                  {articleData.summary} This guide is part of our{" "}
+                  <Link
+                    href={`/knowledge-center/${clusterData.slug}`}
+                    className="font-semibold text-brand-blue transition-colors hover:text-brand-blue-dark"
+                  >
+                    {clusterData.name}
+                  </Link>
+                  , where we cover the full process end-to-end.
+                </p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  If this applies to your business, our{" "}
+                  <Link
+                    href={articleData.relatedService.href}
+                    className="font-semibold text-brand-blue transition-colors hover:text-brand-blue-dark"
+                  >
+                    {articleData.relatedService.label}
+                  </Link>{" "}
+                  service handles this end-to-end — from the first consultation
+                  through to filing and follow-up, so you don&apos;t have to
+                  navigate the process alone.
+                </p>
+                <p className="mt-4 text-sm leading-7 text-slate-600">
+                  Every case is different, so treat this as a starting point
+                  rather than a substitute for advice on your specific situation.
+                  Our team can review your documents and give you a clear,
+                  upfront view of timeline and cost before you commit to anything.
+                </p>
+              </>
+            )}
           </Reveal>
 
           <aside className="space-y-8">

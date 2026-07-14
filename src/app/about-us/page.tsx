@@ -110,7 +110,7 @@ export default function AboutPage() {
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="h-96 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>
                   <div className="p-5">

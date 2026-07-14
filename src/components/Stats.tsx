@@ -1,10 +1,11 @@
 import { BadgeIcon, PinIcon, ClipboardIcon, ClockIcon } from "./icons";
 import Reveal from "./motion/Reveal";
+import Counter from "./motion/Counter";
 
 const stats = [
-  { icon: BadgeIcon, value: "15+", label: "Years of Experience" },
-  { icon: PinIcon, value: "5000+", label: "IP Filings" },
-  { icon: ClipboardIcon, value: "95%", label: "Success Rate" },
+  { icon: BadgeIcon, value: "20+", label: "Years of Experience" },
+  { icon: PinIcon, value: "1000+", label: "IP Cases Handled" },
+  { icon: ClipboardIcon, value: "250+", label: "Active Cases" },
   { icon: ClockIcon, value: "24/7", label: "Client Support" },
 ];
 
@@ -21,7 +22,7 @@ export default function Stats() {
             <stat.icon className="h-8 w-8 shrink-0 text-navy transition-transform duration-300 group-hover:scale-110" />
             <div>
               <p className="text-2xl font-bold text-navy sm:text-3xl">
-                {stat.value}
+                <Counter value={stat.value} />
               </p>
               <p className="text-sm text-slate-500">{stat.label}</p>
             </div>

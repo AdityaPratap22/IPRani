@@ -35,6 +35,7 @@ type RevealProps = HTMLMotionProps<"div"> & {
   index?: number;
   amount?: number;
   as?: keyof typeof tagMap;
+  inView?: boolean;
 };
 
 export default function Reveal({
@@ -43,6 +44,7 @@ export default function Reveal({
   index,
   amount = 0.2,
   as = "div",
+  inView = true,
   children,
   ...props
 }: RevealProps) {
@@ -52,8 +54,10 @@ export default function Reveal({
   return (
     <Component
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount }}
+      {...(inView 
+        ? { whileInView: "visible", viewport: { once: true, amount } } 
+        : { animate: "visible" }
+      )}
       variants={makeRevealVariants(direction)}
       transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98], delay: computedDelay }}
       {...props}

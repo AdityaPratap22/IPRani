@@ -41,7 +41,7 @@ export const caseStudies: CaseStudy[] = [
   {
     title: "Recovering Dues for an NBFC Through SARFAESI Proceedings",
     slug: "nbfc-sarfaesi-recovery",
-    industry: { label: "FinTech", href: "/industries/fintech" },
+    industry: { label: "SaaS & Tech", href: "/industries/saas-tech" },
     service: { label: "SARFAESI Proceedings", href: "/services/litigation/banking-finance/sarfaesi-proceedings" },
     summary:
       "An NBFC client needed to recover a significant secured loan default without a prolonged court process.",

@@ -3,16 +3,13 @@ import { topServiceLinks } from "@/data/services";
 import { priorityIndustries } from "@/data/industries";
 import Reveal from "./motion/Reveal";
 import {
-  LinkedinIcon,
-  TwitterIcon,
-  FacebookIcon,
-  InstagramIcon,
+  MailIcon,
+  PhoneIcon,
 } from "./icons";
 
 const companyLinks = [
   { label: "About Us", href: "/about-us" },
-  { label: "Team", href: "/team" },
-  { label: "Careers", href: "/careers" },
+  { label: "Our Team", href: "/team" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Contact Us", href: "/contact-us" },
 ];
@@ -20,9 +17,55 @@ const companyLinks = [
 const resourceLinks = [
   { label: "Knowledge Center", href: "/knowledge-center" },
   { label: "FAQs", href: "/faqs" },
-  { label: "Fee Calculator / Pricing", href: "/pricing" },
-  { label: "Downloadable Checklists", href: "/knowledge-center" },
+  { label: "Pricing / Fees", href: "/pricing" },
 ];
+
+const domesticLocations = [
+  "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", "Kolkata", "Ahmedabad", "Pune", "Noida", "Gurgaon", "Jaipur", "Dehradun", "Uttarakhand", "Chandigarh", "Lucknow", "Surat", "Indore", "Nagpur", "Kochi", "Coimbatore", "Ghaziabad", "Faridabad", "Thane", "Navi Mumbai", "Bhopal", "Visakhapatnam", "Patna", "Bhubaneswar", "Vadodara", "Rajkot", "Ludhiana", "Amritsar", "Kanpur", "Varanasi", "Agra", "Nashik", "Mysuru", "Mangalore", "Goa", "Guwahati", "Raipur", "Ranchi", "Jodhpur", "Udaipur", "Vijayawada", "Thiruvananthapuram", "Madurai", "Meerut", "Moradabad", "Prayagraj", "Jammu", "Gwalior"
+];
+
+const internationalLocations = [
+  { name: "USA", slug: "us-trademark-registration-for-indian-companies" },
+  { name: "Australia", slug: "australia-trademark-and-patent-filing-guide" },
+  { name: "UK", slug: "uk-trademark-filing-after-brexit" },
+  { name: "South Africa", slug: "african-ip-filing-aripo-and-oapi-routes" },
+  { name: "Europe", slug: "eu-trademark-filing-from-india" }
+];
+
+function getDomesticSlug(city: string) {
+  let slugged = city.toLowerCase().replace(/\s+/g, "-");
+  if (slugged === "mysuru") slugged = "mysore";
+  
+  const extraMapping: Record<string, string> = {
+    "uttarakhand": "dehradun",
+    "goa": "mumbai",
+    "navi-mumbai": "mumbai",
+    "kanpur": "lucknow",
+    "vijayawada": "hyderabad",
+    "madurai": "chennai",
+    "moradabad": "noida",
+    "prayagraj": "varanasi",
+    "jammu": "srinagar",
+    "gwalior": "bhopal"
+  };
+
+  const finalCity = extraMapping[slugged] || slugged;
+
+  const validCities = [
+    "mumbai", "delhi", "bangalore", "hyderabad", "chennai", "kolkata", "pune", "ahmedabad",
+    "jaipur", "lucknow", "chandigarh", "kochi", "indore", "nagpur", "bhopal", "visakhapatnam",
+    "patna", "vadodara", "ghaziabad", "ludhiana", "agra", "nashik", "faridabad", "meerut",
+    "rajkot", "varanasi", "srinagar", "aurangabad", "dhanbad", "amritsar", "noida", "gurgaon",
+    "coimbatore", "thiruvananthapuram", "guwahati", "mysore", "ranchi", "bhubaneswar",
+    "dehradun", "raipur", "jodhpur", "udaipur", "surat", "thane", "mangalore", "shimla",
+    "gangtok", "pondicherry"
+  ];
+
+  if (validCities.includes(finalCity)) {
+    return `/blogs/location/legal-services-in-${finalCity}-complete-guide`;
+  }
+  return `/blogs/location`;
+}
 
 export default function Footer() {
   return (
@@ -38,17 +81,24 @@ export default function Footer() {
               <br />
               Powering businesses.
             </p>
+            <p className="mt-4 text-xs text-slate-400 max-w-xs leading-relaxed">
+              Regd. Office: Chamber No. 88, Street No. 4, District & Session Court, Surajpur, Greater Noida, Uttar Pradesh – 201306, India.
+            </p>
             <div className="mt-5 flex gap-3">
-              {[LinkedinIcon, TwitterIcon, FacebookIcon, InstagramIcon].map(
-                (Icon, i) => (
-                  <span
-                    key={i}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-bg-light text-navy transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:bg-brand-blue hover:text-white"
-                  >
-                    <Icon />
-                  </span>
-                )
-              )}
+              <a
+                href="mailto:ipr@iprani.com"
+                title="Email us"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-bg-light text-navy transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:bg-brand-blue hover:text-white"
+              >
+                <MailIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="tel:+919911655010"
+                title="Call us"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-bg-light text-navy transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:bg-brand-blue hover:text-white"
+              >
+                <PhoneIcon className="h-4 w-4" />
+              </a>
             </div>
           </Reveal>
 
@@ -81,14 +131,6 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  href="/industries"
-                  className="inline-block text-sm text-slate-500 transition-all duration-200 hover:translate-x-1 hover:text-brand-blue"
-                >
-                  View All
-                </Link>
-              </li>
             </ul>
           </Reveal>
 
@@ -125,8 +167,46 @@ export default function Footer() {
           </Reveal>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
-          <p>© 2024 IP Rani. All Rights Reserved. Regd. Office: 123, Legal Avenue, Sector 45, Noida, Uttar Pradesh 201301, India.</p>
+        <hr className="my-10 border-slate-200" />
+
+        <Reveal direction="up" className="space-y-6 pb-4">
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
+              Our Services Are Available In Domestic Locations
+            </h4>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {domesticLocations.map((city) => (
+                <Link
+                  key={city}
+                  href={getDomesticSlug(city)}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
+                >
+                  {city}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
+              Our Services Are Available In International Locations
+            </h4>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {internationalLocations.map((loc) => (
+                <Link
+                  key={loc.name}
+                  href={`/blogs/international-ip/${loc.slug}`}
+                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
+                >
+                  {loc.name}
+                </Link>
+              ))}
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
+          <p>© 2024 IP Rani. All Rights Reserved.</p>
           <div className="flex gap-6">
             <Link href="/terms" className="transition-colors hover:text-brand-blue">
               Terms &amp; Conditions
@@ -134,7 +214,7 @@ export default function Footer() {
             <Link href="/privacy-policy" className="transition-colors hover:text-brand-blue">
               Privacy Policy
             </Link>
-            <a href="https://wa.me/919876543210" className="transition-colors hover:text-brand-blue">
+            <a href="https://wa.me/919911655010" className="transition-colors hover:text-brand-blue">
               WhatsApp
             </a>
           </div>

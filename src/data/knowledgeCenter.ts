@@ -1,8 +1,14 @@
+import { howToDoATrademarkSearchContent } from "./articles/how-to-do-a-trademark-search";
+import { trademarkRectificationForSaaSContent } from "./articles/trademark-rectification-for-saas";
+import { faqOn3DTrademarkContent } from "./articles/faq-on-3d-trademark";
+import { trademarkWatchMonitoringContent } from "./articles/trademark-watch-monitoring";
+
 export type Article = {
   title: string;
   slug: string;
   summary: string;
   relatedService: { label: string; href: string };
+  content?: string;
 };
 
 export type Cluster = {
@@ -40,6 +46,7 @@ export const clusters: Cluster[] = [
         slug: "how-to-do-a-trademark-search",
         summary: "Why a clearance search matters and what to check before you file.",
         relatedService: { label: "Trademark Search", href: "/services/intellectual-property/trademark/search" },
+        content: howToDoATrademarkSearchContent,
       },
       {
         title: "Trademark Classes Explained (NICE Classification)",
@@ -64,6 +71,27 @@ export const clusters: Cluster[] = [
         slug: "trademark-renewal-deadlines-and-process",
         summary: "When to renew, what it costs, and what happens if you miss the deadline.",
         relatedService: { label: "Trademark Renewal", href: "/services/intellectual-property/trademark/renewal" },
+      },
+      {
+        title: "Trademark Rectification for SaaS and Technology Companies",
+        slug: "trademark-rectification-for-saas",
+        summary: "A complete guide to resolving classification errors, correcting registry entries, and prosecuting defensive actions.",
+        relatedService: { label: "Trademark Objection", href: "/services/intellectual-property/trademark/objection" },
+        content: trademarkRectificationForSaaSContent,
+      },
+      {
+        title: "Frequently Asked Questions on 3D Trademark",
+        slug: "faq-on-3d-trademark",
+        summary: "Clear answers on protecting shapes, packaging, layout designs, and acquired distinctiveness under Indian law.",
+        relatedService: { label: "Trademark Filing & Drafting", href: "/services/intellectual-property/trademark/filing-drafting" },
+        content: faqOn3DTrademarkContent,
+      },
+      {
+        title: "Trademark Watch & Monitoring: Online vs Offline Process Compared",
+        slug: "trademark-watch-monitoring",
+        summary: "A side-by-side comparison of manual reviews versus automated crawlers for early trademark journal detection.",
+        relatedService: { label: "Trademark Watch & Monitoring", href: "/services/intellectual-property/trademark/watch-monitoring" },
+        content: trademarkWatchMonitoringContent,
       },
     ],
   },
@@ -230,7 +258,7 @@ export const clusters: Cluster[] = [
       { label: "Design Drafting & Filing", href: "/services/intellectual-property/design/drafting-filing" },
       { label: "Copyright Licensing", href: "/services/intellectual-property/copyright/licensing" },
     ],
-    relatedIndustry: { label: "Media & Creators", href: "/industries/media-creators" },
+    relatedIndustry: { label: "SaaS & Tech", href: "/industries/saas-tech" },
     articles: [
       {
         title: "Copyright vs Design Registration: Which Do You Need",

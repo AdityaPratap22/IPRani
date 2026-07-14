@@ -17,7 +17,7 @@ export default function CareersPage() {
             you&apos;d be a great fit.
           </p>
           <a
-            href="mailto:hello@iprani.com"
+            href="mailto:ipr@iprani.com"
             className="mt-6 inline-flex rounded-md bg-brand-blue px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg"
           >
             Email Your Resume
