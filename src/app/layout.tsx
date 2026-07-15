@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WhatsappFloat from "@/components/WhatsappFloat";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,6 +20,11 @@ export const metadata: Metadata = {
   title: "IP Rani | IP & Legal Solutions for Businesses",
   description:
     "End-to-end IP & Legal solutions for start-ups, enterprises and growing businesses.",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -35,6 +41,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <WhatsappFloat />
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import CtaBanner from "@/components/CtaBanner";
 import RelatedLinks from "@/components/RelatedLinks";
 import Reveal from "@/components/motion/Reveal";
 import { caseStudies, findCaseStudy } from "@/data/caseStudies";
+import { generateCaseStudyContent } from "@/data/caseStudyGenerator";
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -29,6 +30,13 @@ export default async function CaseStudyPage({
   const data = findCaseStudy(slug);
   if (!data) notFound();
 
+  const { challengeHtml, approachHtml, outcomeHtml } = generateCaseStudyContent(
+    data.title,
+    data.industry.label,
+    data.service.label,
+    data.summary
+  );
+
   return (
     <>
       <PageHeader
@@ -39,18 +47,29 @@ export default async function CaseStudyPage({
 
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
-          <div className="space-y-8 lg:col-span-2">
-            <Reveal index={0}>
-              <h2 className="text-xl font-bold text-navy">The Challenge</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{data.challenge}</p>
+          <div className="space-y-12 lg:col-span-2">
+            <Reveal inView={false} index={0}>
+              <h2 className="text-2xl font-bold text-navy border-b border-slate-100 pb-3">The Challenge</h2>
+              <div 
+                className="mt-4 prose prose-slate max-w-none text-slate-600 leading-7 [&_p]:text-sm [&_p]:leading-7 [&_p]:text-slate-600 [&_p]:mb-4 [&_ul]:text-sm [&_ul]:text-slate-600 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_li]:mb-1 [&_strong]:text-navy [&_strong]:font-semibold"
+                dangerouslySetInnerHTML={{ __html: challengeHtml }}
+              />
             </Reveal>
-            <Reveal index={1}>
-              <h2 className="text-xl font-bold text-navy">Our Approach</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{data.approach}</p>
+            
+            <Reveal inView={false} index={1}>
+              <h2 className="text-2xl font-bold text-navy border-b border-slate-100 pb-3">Our Approach</h2>
+              <div 
+                className="mt-4 prose prose-slate max-w-none text-slate-600 leading-7 [&_p]:text-sm [&_p]:leading-7 [&_p]:text-slate-600 [&_p]:mb-4 [&_ul]:text-sm [&_ul]:text-slate-600 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_li]:mb-1 [&_strong]:text-navy [&_strong]:font-semibold"
+                dangerouslySetInnerHTML={{ __html: approachHtml }}
+              />
             </Reveal>
-            <Reveal index={2}>
-              <h2 className="text-xl font-bold text-navy">The Outcome</h2>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{data.outcome}</p>
+            
+            <Reveal inView={false} index={2}>
+              <h2 className="text-2xl font-bold text-navy border-b border-slate-100 pb-3">The Outcome</h2>
+              <div 
+                className="mt-4 prose prose-slate max-w-none text-slate-600 leading-7 [&_p]:text-sm [&_p]:leading-7 [&_p]:text-slate-600 [&_p]:mb-4 [&_ul]:text-sm [&_ul]:text-slate-600 [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_li]:mb-1 [&_strong]:text-navy [&_strong]:font-semibold"
+                dangerouslySetInnerHTML={{ __html: outcomeHtml }}
+              />
             </Reveal>
           </div>
 

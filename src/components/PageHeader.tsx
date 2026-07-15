@@ -15,7 +15,7 @@ export default function PageHeader({
       <Reveal inView={false} className="mx-auto max-w-7xl">
         <h1 className="text-3xl font-bold text-white sm:text-4xl">{title}</h1>
         {subtitle && (
-          <p className="mt-2 max-w-2xl text-sm text-slate-300">{subtitle}</p>
+          <p className="mt-2 max-w-3xl text-base text-slate-300">{subtitle}</p>
         )}
         <div className="mt-3">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, ...crumbs]} />

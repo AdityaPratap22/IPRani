@@ -220,7 +220,7 @@ export default function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className={`group relative text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
+              className={`group relative inline-block text-sm font-medium transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
                 pathname === link.href ? "text-white after:w-full" : "text-white/80 hover:text-white"
               }`}
             >
@@ -237,7 +237,7 @@ export default function Header() {
             >
               <Link
                 href={href}
-                className={`relative flex items-center gap-1 text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full ${
+                className={`relative flex items-center gap-1 text-sm font-medium transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 group-hover:after:w-full ${
                   pathname.startsWith(href) ? "text-white after:w-full" : "text-white/80 hover:text-white"
                 }`}
               >
@@ -254,7 +254,7 @@ export default function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className={`group relative text-sm font-medium transition-colors after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
+              className={`group relative inline-block text-sm font-medium transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 after:bg-white after:transition-all after:duration-300 hover:after:w-full ${
                 pathname === link.href ? "text-white after:w-full" : "text-white/80 hover:text-white"
               }`}
             >
@@ -266,7 +266,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <Link
             href="/contact-us"
-            className="inline-block rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-all duration-200 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg"
+            className="inline-block rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-all duration-200 hover:scale-105 hover:-translate-y-0.5 hover:bg-slate-100 hover:shadow-lg active:scale-95"
           >
             Get Consultation
           </Link>

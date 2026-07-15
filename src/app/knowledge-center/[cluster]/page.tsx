@@ -6,6 +6,7 @@ import RelatedLinks from "@/components/RelatedLinks";
 import Reveal from "@/components/motion/Reveal";
 import { clusters, findCluster } from "@/data/knowledgeCenter";
 import { ArrowRightIcon } from "@/components/icons";
+import { generateLegalContent } from "@/data/knowledgeCenterGenerator";
 
 export function generateStaticParams() {
   return clusters.map((c) => ({ cluster: c.slug }));
@@ -29,6 +30,13 @@ export default async function ClusterPage({
   const { cluster } = await params;
   const data = findCluster(cluster);
   if (!data) notFound();
+
+  const overviewHtml = generateLegalContent(
+    `${data.name} - Comprehensive Handbook & Regulatory Guide`,
+    data.slug,
+    data.slug,
+    data.description
+  );
 
   return (
     <>
@@ -65,6 +73,16 @@ export default async function ClusterPage({
                   </Link>
                 </Reveal>
               ))}
+            </div>
+
+            {/* Comprehensive Handbook Overview Content (2000-3000 words) */}
+            <div className="mt-12 pt-10 border-t border-slate-200">
+              <Reveal inView={false}>
+                <div 
+                  className="prose prose-slate max-w-none text-slate-600 leading-7 [&_h1]:text-2xl [&_h1]:font-bold [&_h1]:text-navy [&_h1]:mb-6 [&_h2]:text-xl [&_h2]:font-bold [&_h2]:text-navy [&_h2]:mt-10 [&_h2]:mb-4 [&_h3]:text-lg [&_h3]:font-bold [&_h3]:text-navy [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:text-sm [&_p]:leading-7 [&_p]:text-slate-600 [&_ul]:text-sm [&_ul]:text-slate-600 [&_ol]:text-sm [&_ol]:text-slate-600 [&_table]:text-sm [&_a]:text-brand-blue [&_a]:font-semibold [&_a]:no-underline hover:[&_a]:text-brand-blue-dark [&_a]:transition-colors"
+                  dangerouslySetInnerHTML={{ __html: overviewHtml }}
+                />
+              </Reveal>
             </div>
           </div>
 

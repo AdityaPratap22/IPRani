@@ -89,14 +89,6 @@ export default function ImpactStats() {
             </Reveal>
           </div>
         </div>
-
-        <div className="mt-14 text-center">
-          <Reveal direction="up">
-            <p className="text-xs italic text-slate-400">
-              These numbers reflect our commitment to quality, speed, and results in IP services.
-            </p>
-          </Reveal>
-        </div>
       </div>
     </section>
   );

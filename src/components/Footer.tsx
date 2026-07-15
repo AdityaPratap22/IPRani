@@ -5,6 +5,7 @@ import Reveal from "./motion/Reveal";
 import {
   MailIcon,
   PhoneIcon,
+  WhatsappIcon,
 } from "./icons";
 
 const companyLinks = [
@@ -98,6 +99,15 @@ export default function Footer() {
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-bg-light text-navy transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:bg-brand-blue hover:text-white"
               >
                 <PhoneIcon className="h-4 w-4" />
+              </a>
+              <a
+                href="https://wa.me/919911655010"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Chat on WhatsApp"
+                className="flex h-8 w-8 items-center justify-center rounded-full bg-bg-light text-navy transition-all duration-200 hover:-translate-y-1 hover:scale-110 hover:bg-emerald-500 hover:text-white"
+              >
+                <WhatsappIcon className="h-4.5 w-4.5" />
               </a>
             </div>
           </Reveal>
@@ -204,21 +214,6 @@ export default function Footer() {
             </div>
           </div>
         </Reveal>
-
-        <div className="mt-6 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-6 text-xs text-slate-400 sm:flex-row">
-          <p>© 2024 IP Rani. All Rights Reserved.</p>
-          <div className="flex gap-6">
-            <Link href="/terms" className="transition-colors hover:text-brand-blue">
-              Terms &amp; Conditions
-            </Link>
-            <Link href="/privacy-policy" className="transition-colors hover:text-brand-blue">
-              Privacy Policy
-            </Link>
-            <a href="https://wa.me/919911655010" className="transition-colors hover:text-brand-blue">
-              WhatsApp
-            </a>
-          </div>
-        </div>
       </div>
 
       <div className="bg-navy px-4 py-4 sm:px-6 lg:px-8">
