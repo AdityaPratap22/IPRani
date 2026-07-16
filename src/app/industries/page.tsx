@@ -11,10 +11,10 @@ function IndustryGrid({ items }: { items: typeof priorityIndustries }) {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((industry, i) => (
-        <Reveal key={industry.slug} index={i}>
+        <Reveal inView={false} key={industry.slug} index={i}>
           <Link
             href={`/industries/${industry.slug}`}
-            className="group block h-full rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
+            className="group block h-full rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
           >
             <h3 className="text-base font-bold text-navy group-hover:text-brand-blue">
               {industry.name}
@@ -42,12 +42,12 @@ export default function IndustriesPage() {
 
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <Reveal><h2 className="text-xl font-bold text-navy">Priority Industries</h2></Reveal>
+          <Reveal inView={false}><h2 className="text-xl font-bold text-navy">Priority Industries</h2></Reveal>
           <div className="mt-6">
             <IndustryGrid items={priorityIndustries} />
           </div>
 
-          <Reveal>
+          <Reveal inView={false}>
             <h2 className="mt-16 text-xl font-bold text-navy">
               Additional Industries We Support
             </h2>
