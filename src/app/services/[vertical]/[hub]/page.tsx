@@ -79,7 +79,7 @@ export default async function HubPage({
                   <Reveal key={sub.slug} index={i}>
                     <Link
                       href={`/services/${verticalData.slug}/${hubData.slug}/${sub.slug}`}
-                      className="group block h-full rounded-2xl border border-slate-200 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
+                      className="group block h-full rounded-2xl border border-slate-200 p-5 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
                     >
                       <h3 className="text-base font-bold text-navy group-hover:text-brand-blue">
                         {sub.name}

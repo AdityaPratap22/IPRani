@@ -334,9 +334,9 @@ export default function Header() {
                       {...accordionCollapse}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 space-y-3 border-l border-white/10 pl-3">
-                        {serviceVerticals.map((vertical) => (
-                          <div key={vertical.slug}>
+                      <div className="mt-3 space-y-4 border-l border-white/10 pl-4">
+                        {serviceVerticals.map((vertical, index) => (
+                          <div key={vertical.slug} className={`${index > 0 ? "border-t border-white/10 pt-4" : ""} space-y-2`}>
                             <Link
                               href={`/services/${vertical.slug}`}
                               onClick={() => setOpen(false)}
@@ -344,13 +344,13 @@ export default function Header() {
                             >
                               {vertical.name}
                             </Link>
-                            <div className="mt-1 flex flex-col gap-1">
+                            <div className="mt-1 flex flex-col pl-2 divide-y divide-white/5">
                               {vertical.hubs.map((hub) => (
                                 <Link
                                   key={hub.slug}
                                   href={`/services/${vertical.slug}/${hub.slug}`}
                                   onClick={() => setOpen(false)}
-                                  className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white"
+                                  className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white"
                                 >
                                   {hub.name}
                                 </Link>
@@ -384,13 +384,13 @@ export default function Header() {
                       {...accordionCollapse}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 flex flex-col gap-1 border-l border-white/10 pl-3">
+                      <div className="mt-3 flex flex-col border-l border-white/10 pl-4 divide-y divide-white/5">
                         {priorityIndustries.map((industry) => (
                           <Link
                             key={industry.slug}
                             href={`/industries/${industry.slug}`}
                             onClick={() => setOpen(false)}
-                            className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white"
+                            className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white"
                           >
                             {industry.name}
                           </Link>
@@ -398,7 +398,7 @@ export default function Header() {
                         <Link
                           href="/industries"
                           onClick={() => setOpen(false)}
-                          className="inline-block text-sm font-semibold text-white transition-transform duration-200 hover:translate-x-1"
+                          className="inline-block pt-2 py-1.5 text-sm font-semibold text-white transition-transform duration-200 hover:translate-x-1"
                         >
                           View All Industries
                         </Link>
@@ -428,44 +428,50 @@ export default function Header() {
                       {...accordionCollapse}
                       className="overflow-hidden"
                     >
-                      <div className="mt-2 flex flex-col gap-1 border-l border-white/10 pl-3 text-left">
+                      <div className="mt-3 flex flex-col border-l border-white/10 pl-4 text-left">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-1 block">
                           Guides &amp; Handbooks
                         </span>
-                        {clusters.map((cluster) => (
+                        <div className="flex flex-col divide-y divide-white/5 mt-1">
+                          {clusters.map((cluster) => (
+                            <Link
+                              key={cluster.slug}
+                              href={`/knowledge-center/${cluster.slug}`}
+                              onClick={() => setOpen(false)}
+                              className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                            >
+                              {cluster.name}
+                            </Link>
+                          ))}
+                        </div>
+                        <div className="border-t border-white/10 my-2 pt-2">
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 block">
+                            Insights &amp; Resources
+                          </span>
+                        </div>
+                        <div className="flex flex-col divide-y divide-white/5">
                           <Link
-                            key={cluster.slug}
-                            href={`/knowledge-center/${cluster.slug}`}
+                            href="/knowledge-center"
                             onClick={() => setOpen(false)}
-                            className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                            className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
                           >
-                            {cluster.name}
+                            Blogs &amp; Insights
                           </Link>
-                        ))}
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-white/40 mt-3 block">
-                          Insights &amp; Resources
-                        </span>
-                        <Link
-                          href="/knowledge-center"
-                          onClick={() => setOpen(false)}
-                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
-                        >
-                          Blogs &amp; Insights
-                        </Link>
-                        <Link
-                          href="/case-studies"
-                          onClick={() => setOpen(false)}
-                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
-                        >
-                          Case Studies
-                        </Link>
-                        <Link
-                          href="/faqs"
-                          onClick={() => setOpen(false)}
-                          className="inline-block text-sm text-white/70 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
-                        >
-                          FAQs
-                        </Link>
+                          <Link
+                            href="/case-studies"
+                            onClick={() => setOpen(false)}
+                            className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                          >
+                            Case Studies
+                          </Link>
+                          <Link
+                            href="/faqs"
+                            onClick={() => setOpen(false)}
+                            className="inline-block py-1.5 text-sm text-white/80 transition-transform duration-200 hover:translate-x-1 hover:text-white pl-1"
+                          >
+                            FAQs
+                          </Link>
+                        </div>
                       </div>
                     </motion.div>
                   )}

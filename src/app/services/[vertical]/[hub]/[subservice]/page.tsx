@@ -8,6 +8,7 @@ import { serviceVerticals, findSubService } from "@/data/services";
 import { industries } from "@/data/industries";
 import { clusters } from "@/data/knowledgeCenter";
 import { CheckShieldIcon } from "@/components/icons";
+import { generateServiceContent } from "@/data/serviceGenerator";
 
 export function generateStaticParams() {
   return serviceVerticals.flatMap((v) =>
@@ -30,29 +31,6 @@ export async function generateMetadata({
   const found = findSubService(vertical, hub, subservice);
   return { title: found ? `${found.subService.name} | IP Rani` : "Services | IP Rani" };
 }
-
-const processSteps = [
-  "Free initial consultation to understand your requirement",
-  "Search, drafting or documentation as applicable",
-  "Filing with the relevant authority",
-  "Tracking and responding to office actions",
-  "Confirmation once the matter is resolved or registered",
-];
-
-const faqs = (name: string) => [
-  {
-    q: `How long does ${name} take?`,
-    a: "Timelines vary by case complexity and the relevant authority's processing time. We share a realistic estimate after the initial consultation.",
-  },
-  {
-    q: `What documents do I need for ${name}?`,
-    a: "We provide a checklist specific to your case once we understand your requirement — most clients can start with basic identity and business documents.",
-  },
-  {
-    q: `Can IP Rani handle ${name} entirely online?`,
-    a: "Yes, we handle documentation, filing and follow-up remotely, with calls scheduled as needed for key decisions.",
-  },
-];
 
 export default async function SubServicePage({
   params,
@@ -83,6 +61,13 @@ export default async function SubServicePage({
     )
     .slice(0, 3);
 
+  const serviceContent = generateServiceContent(
+    verticalData.slug,
+    hubData.slug,
+    subService.slug,
+    subService.name
+  );
+
   return (
     <>
       <PageHeader
@@ -99,30 +84,110 @@ export default async function SubServicePage({
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
           <div className="lg:col-span-2">
+            {/* 1. How the Process Works */}
             <h2 className="text-2xl font-bold text-navy">
               How Our {subService.name} Process Works
             </h2>
             <ul className="mt-6 space-y-4">
-              {processSteps.map((step, i) => (
+              {serviceContent.processSteps.map((step, i) => (
                 <li key={step}>
-                  <Reveal index={i} direction="left" className="flex items-start gap-3">
+                  <Reveal inView={false} index={i} direction="left" className="flex items-start gap-3">
                     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-bg-light text-xs font-bold text-brand-blue transition-transform duration-300 hover:scale-110">
                       {i + 1}
                     </span>
-                    <span className="text-sm text-slate-600">{step}</span>
+                    <span className="text-sm text-slate-600 leading-6">{step}</span>
                   </Reveal>
                 </li>
               ))}
             </ul>
 
+            {/* 2. Who is this service for? */}
+            <h2 className="mt-12 text-2xl font-bold text-navy">
+              Who is this service for?
+            </h2>
+            <div className="mt-6 space-y-4">
+              {serviceContent.whoFor.map((desc, i) => (
+                <Reveal inView={false} key={i} index={i} direction="left" className="flex items-start gap-3">
+                  <span className="flex h-2 w-2 mt-2 shrink-0 rounded-full bg-brand-blue" />
+                  <span className="text-sm text-slate-600 leading-6">{desc}</span>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 3. Why you need this service */}
+            <h2 className="mt-12 text-2xl font-bold text-navy">
+              Why you need this service
+            </h2>
+            <div className="mt-6 space-y-4">
+              {serviceContent.whyNeed.map((desc, i) => (
+                <Reveal inView={false} key={i} index={i} direction="left" className="flex items-start gap-3">
+                  <span className="flex h-2 w-2 mt-2 shrink-0 rounded-full bg-brand-blue" />
+                  <span 
+                    className="text-sm text-slate-600 leading-6"
+                    dangerouslySetInnerHTML={{ __html: desc }}
+                  />
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 4. Required Documents & Deliverables */}
+            <h2 className="mt-12 text-2xl font-bold text-navy">
+              Required Documents &amp; Deliverables
+            </h2>
+            <div className="mt-6 space-y-4">
+              {serviceContent.documents.map((doc, i) => (
+                <Reveal inView={false} key={i} index={i} direction="left" className="flex items-start gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-blue-50 text-brand-blue">
+                    <CheckShieldIcon className="h-3 w-3" />
+                  </span>
+                  <span className="text-sm text-slate-600 leading-6">{doc}</span>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 5. Timeline & Roadmap */}
+            <h2 className="mt-12 text-2xl font-bold text-navy">
+              Filing Timeline &amp; Roadmap
+            </h2>
+            <div className="mt-4">
+              <Reveal inView={false} direction="left">
+                <p className="text-sm text-slate-600 leading-7 bg-bg-light rounded-xl p-5 border border-slate-100">
+                  {serviceContent.timeline}
+                </p>
+              </Reveal>
+            </div>
+
+            {/* 6. Onboarding & Engagement Process */}
+            <h2 className="mt-12 text-2xl font-bold text-navy">
+              How IP Rani Works: Our Onboarding &amp; Engagement Process
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              We make legal and intellectual property filings seamless, secure, and fully transparent. Here is how we handle your assignment from start to finish:
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {[
+                { title: "1. Strategy Call", desc: "Understand your goals, check eligibility, and draft the filing roadmap." },
+                { title: "2. Document Audit", desc: "Collect required records and conduct compliance checks for errors." },
+                { title: "3. Fast Filing", desc: "Draft and submit applications to the registry within 48 business hours." },
+                { title: "4. Active Tracking", desc: "Monitor application progress and respond to office actions/objections." },
+                { title: "5. Final Delivery", desc: "Handover certified registrations and provide post-filing support." }
+              ].map((item, i) => (
+                <Reveal inView={false} key={i} index={i} className="relative rounded-xl border border-slate-100 bg-bg-light p-4 shadow-sm hover:scale-105 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 cursor-default">
+                  <h4 className="text-sm font-bold text-navy">{item.title}</h4>
+                  <p className="mt-2 text-[12px] text-slate-500 leading-5">{item.desc}</p>
+                </Reveal>
+              ))}
+            </div>
+
+            {/* 7. FAQs */}
             <h2 className="mt-12 text-2xl font-bold text-navy">
               Frequently Asked Questions
             </h2>
             <div className="mt-6 space-y-6">
-              {faqs(subService.name).map((faq, i) => (
-                <Reveal key={faq.q} index={i} className="rounded-xl p-4 transition-colors duration-300 hover:bg-bg-light-2">
+              {serviceContent.faqs.map((faq, i) => (
+                <Reveal inView={false} key={faq.q} index={i} className="rounded-xl p-4 transition-colors duration-300 hover:bg-bg-light-2">
                   <h3 className="text-base font-semibold text-navy">{faq.q}</h3>
-                  <p className="mt-1 text-sm text-slate-500">{faq.a}</p>
+                  <p className="mt-1 text-sm text-slate-500 leading-6">{faq.a}</p>
                 </Reveal>
               ))}
             </div>

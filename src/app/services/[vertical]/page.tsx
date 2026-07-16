@@ -60,7 +60,7 @@ export default async function VerticalPage({
               <Reveal
                 key={hub.slug}
                 index={i}
-                className="rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
+                className="rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
               >
                 <h3 className="text-lg font-bold text-navy">{hub.name}</h3>
                 <p className="mt-1 text-sm text-slate-500">{hub.summary}</p>
