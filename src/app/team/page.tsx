@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/motion/Reveal";
@@ -89,11 +88,9 @@ export default function TeamPage() {
                   className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white text-center shadow-sm transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
                   <div className="overflow-hidden">
-                    <Image
+                    <img
                       src={member.image}
                       alt={member.name}
-                      width={400}
-                      height={384}
                       className="h-96 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>

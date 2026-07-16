@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
@@ -51,12 +50,9 @@ export default async function TeamMemberPage({
           <Reveal inView={false} className="lg:col-span-2 space-y-10">
             {/* Photo + Quick Stats */}
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
-              <Image
+              <img
                 src={data.image}
                 alt={data.name}
-                width={400}
-                height={450}
-                priority
                 className="h-[450px] w-full max-w-sm shrink-0 rounded-2xl object-cover object-top shadow-md transition-transform duration-500 hover:scale-[1.03]"
               />
               <div className="flex flex-col justify-center">

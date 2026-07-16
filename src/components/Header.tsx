@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -211,12 +210,9 @@ export default function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center transition-transform duration-200 hover:scale-[1.03]" aria-label="IP Rani Home">
-          <Image
+          <img
             src="/logo.webp"
             alt="IP Rani logo"
-            width={92}
-            height={48}
-            priority
             className="h-11 w-auto sm:h-12"
           />
         </Link>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import Stats from "@/components/Stats";
 import ImpactStats from "@/components/ImpactStats";
 import CtaBanner from "@/components/CtaBanner";
@@ -217,13 +216,10 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-r from-bg-light via-bg-light-2 to-white shadow-[0_20px_35px_-15px_rgba(13,43,82,0.35)]">
         {/* Desktop: photo blended into the right side of the hero */}
         <Reveal inView={false} direction="right" className="absolute inset-y-0 right-0 hidden w-[64%] lg:block">
-          <Image
+          <img
             src="/hero.webp"
             alt="IP Rani team advising a client on legal and IP strategies"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 64vw"
-            className="object-cover object-center transition-transform duration-700 hover:scale-105"
+            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
           />
           {/* fade only blends the left seam so the lady stays fully visible */}
           <div className="absolute inset-0 bg-gradient-to-r from-bg-light-2 to-transparent to-14%" />
@@ -262,12 +258,9 @@ export default function Home() {
 
           {/* Mobile: photo stacked below the text */}
           <div className="mt-10 lg:hidden">
-            <Image
+            <img
               src="/hero.webp"
               alt="IP Rani team advising a client"
-              width={900}
-              height={256}
-              priority
               className="h-64 w-full rounded-2xl object-cover shadow-lg"
             />
           </div>

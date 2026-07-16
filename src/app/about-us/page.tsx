@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
 import Stats from "@/components/Stats";
@@ -56,11 +55,9 @@ export default function AboutPage() {
             </p>
           </Reveal>
           <Reveal inView={false} direction="right">
-            <Image
+            <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
               alt="IP Rani office team working together"
-              width={900}
-              height={320}
               className="h-80 w-full rounded-2xl object-cover shadow-md transition-transform duration-500 hover:scale-[1.03]"
             />
           </Reveal>
@@ -114,11 +111,9 @@ export default function AboutPage() {
                   className="group block overflow-hidden rounded-2xl bg-white text-center shadow-sm transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
                   <div className="overflow-hidden">
-                    <Image
+                    <img
                       src={member.image}
                       alt={member.name}
-                      width={400}
-                      height={384}
                       className="h-96 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     />
                   </div>

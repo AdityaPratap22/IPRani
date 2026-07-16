@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/motion/Reveal";
@@ -48,11 +47,9 @@ export default function ServicesPage() {
                   i % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""
                 }`}
               >
-                <Image
+                <img
                   src={verticalImages[vertical.slug]}
                   alt={vertical.name}
-                  width={900}
-                  height={288}
                   className="h-72 w-full rounded-2xl object-cover shadow-md transition-transform duration-500 hover:scale-[1.03]"
                 />
                 <div>

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { topServiceLinks } from "@/data/services";
 import { priorityIndustries } from "@/data/industries";
 import Reveal from "./motion/Reveal";
@@ -76,11 +75,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-12">
           <Reveal direction="up" className="col-span-2 md:col-span-6 lg:col-span-4">
             <Link href="/" className="inline-flex items-center transition-transform duration-200 hover:scale-[1.03]" aria-label="IP Rani Home">
-              <Image
+              <img
                 src="/logo-dark.webp"
                 alt="IP Rani logo"
-                width={107}
-                height={56}
                 className="h-12 w-auto sm:h-14"
               />
             </Link>
