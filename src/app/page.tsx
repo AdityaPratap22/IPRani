@@ -25,6 +25,8 @@ import {
   ArrowRightIcon,
   PinIcon,
   ShieldIcon,
+  GlobeIcon,
+  AcademicIcon,
 } from "@/components/icons";
 
 const practiceAreas = [
@@ -124,6 +126,22 @@ const practiceAreas = [
     href: "/services/intellectual-property",
     linkLabel: "Explore Search Services",
   },
+  {
+    icon: GlobeIcon,
+    iconColor: "text-blue-600 bg-blue-50",
+    title: "International Filings",
+    description: "Expand your business globally with seamless international IP protection. We facilitate trademark, patent, and design filings in 150+ countries through WIPO, Madrid Protocol, and direct foreign filings.",
+    items: [
+      "Madrid Protocol Filing (Trademarks)",
+      "PCT International Filings (Patents)",
+      "Hague System Filings (Designs)",
+      "US, EU, UK, & Global Direct Filings",
+      "WIPO & Foreign Registry Liaison",
+      "Technology Licensing & Agreements",
+    ],
+    href: "/services/intellectual-property",
+    linkLabel: "Explore International Filings",
+  },
 ];
 
 const otherServices = [
@@ -179,6 +197,7 @@ const industries = [
   { icon: LaptopIcon, label: "SaaS & Tech", slug: "saas-tech" },
   { icon: CartIcon, label: "D2C & E-commerce", slug: "d2c-ecommerce" },
   { icon: FactoryIcon, label: "Manufacturing", slug: "manufacturing" },
+  { icon: AcademicIcon, label: "Universities", slug: "universities-academia" },
 ];
 
 const whyUs = [
@@ -269,6 +288,10 @@ export default function Home() {
 
       <Stats />
 
+
+
+
+
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <Reveal>
@@ -278,37 +301,37 @@ export default function Home() {
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {practiceAreas.map((area, i) => (
-              <Reveal
-                key={area.title}
-                index={i}
-                className="group rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
-              >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`flex h-10 w-10 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110 ${area.iconColor}`}
-                  >
-                    <area.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="text-lg font-bold text-navy">{area.title}</h3>
-                </div>
-                <p className="mt-3 text-sm text-slate-500">{area.description}</p>
-                <ul className="mt-4 space-y-2">
-                  {area.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-2 text-sm text-slate-600"
-                    >
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <Reveal key={area.title} index={i} inView={false}>
                 <Link
                   href={area.href}
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-all duration-200 hover:gap-2.5 hover:text-brand-blue-dark"
+                  className="group block rounded-2xl border border-slate-200 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl h-full cursor-pointer bg-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
-                  {area.linkLabel}
-                  <ArrowRightIcon className="h-3.5 w-3.5" />
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`flex h-10 w-10 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110 ${area.iconColor}`}
+                    >
+                      <area.icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="text-lg font-bold text-navy">{area.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm text-slate-500">{area.description}</p>
+                  <ul className="mt-4 space-y-2">
+                    {area.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-center gap-2 text-sm text-slate-600"
+                      >
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-all duration-200 group-hover:gap-2.5 group-hover:text-brand-blue-dark"
+                  >
+                    {area.linkLabel}
+                    <ArrowRightIcon className="h-3.5 w-3.5" />
+                  </div>
                 </Link>
               </Reveal>
             ))}
@@ -337,37 +360,37 @@ export default function Home() {
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
             {otherServices.map((area, i) => (
-              <Reveal
-                key={area.title}
-                index={i}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl"
-              >
-                <div className="flex items-center gap-3">
-                  <span
-                    className={`flex h-10 w-10 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110 ${area.iconColor}`}
-                  >
-                    <area.icon className="h-5 w-5" />
-                  </span>
-                  <h3 className="text-lg font-bold text-navy">{area.title}</h3>
-                </div>
-                <p className="mt-3 text-sm text-slate-500">{area.description}</p>
-                <ul className="mt-4 space-y-2">
-                  {area.items.map((item) => (
-                    <li
-                      key={item}
-                      className="flex items-center gap-2 text-sm text-slate-600"
-                    >
-                      <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <Reveal key={area.title} index={i} inView={false}>
                 <Link
                   href={area.href}
-                  className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-all duration-200 hover:gap-2.5 hover:text-brand-blue-dark"
+                  className="group block rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:-translate-y-2 hover:border-brand-blue/40 hover:shadow-xl h-full cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
-                  {area.linkLabel}
-                  <ArrowRightIcon className="h-3.5 w-3.5" />
+                  <div className="flex items-center gap-3">
+                    <span
+                      className={`flex h-10 w-10 items-center justify-center rounded-lg transition-transform duration-300 group-hover:scale-110 ${area.iconColor}`}
+                    >
+                      <area.icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="text-lg font-bold text-navy">{area.title}</h3>
+                  </div>
+                  <p className="mt-3 text-sm text-slate-500">{area.description}</p>
+                  <ul className="mt-4 space-y-2">
+                    {area.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-center gap-2 text-sm text-slate-600"
+                      >
+                        <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-blue" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div
+                    className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-blue transition-all duration-200 group-hover:gap-2.5 group-hover:text-brand-blue-dark"
+                  >
+                    {area.linkLabel}
+                    <ArrowRightIcon className="h-3.5 w-3.5" />
+                  </div>
                 </Link>
               </Reveal>
             ))}
@@ -394,7 +417,7 @@ export default function Home() {
               Industries We Serve
             </h2>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
             {industries.map((industry, i) => (
               <Reveal key={industry.label} index={i} direction="none">
                 <Link
@@ -411,6 +434,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
 
       <section className="bg-white px-4 py-16 sm:px-6 lg:px-8">
         <Reveal className="mx-auto max-w-6xl rounded-3xl bg-bg-light p-8 sm:p-12">
@@ -436,6 +461,66 @@ export default function Home() {
             ))}
           </div>
         </Reveal>
+      </section>
+
+      {/* Our Clients Section */}
+      <section className="bg-white py-16 border-t border-b border-slate-100 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Reveal direction="down">
+              <h2 className="text-3xl font-bold text-navy sm:text-4xl">
+                Our Clients
+              </h2>
+              <div className="mx-auto mt-4 h-[2px] w-24 bg-brand-blue/30" />
+            </Reveal>
+          </div>
+          
+          <div className="mt-14 marquee-container">
+            <div className="marquee-content">
+              <img src="/clients/muthoot-finance.png" alt="Muthoot Finance" className="h-14 object-contain" />
+              <img src="/clients/bajaj-finserv.png" alt="Bajaj Finserv" className="h-14 object-contain" />
+              <img src="/clients/bajaj-housing.png" alt="Bajaj Housing Finance" className="h-14 object-contain" />
+              <img src="/clients/lt-finance.png" alt="L&amp;T Finance" className="h-14 object-contain" />
+              <img src="/clients/shriram-automall.png" alt="Shriram Automall" className="h-15 object-contain" />
+              <img src="/clients/srei.png" alt="SREI" className="h-14 object-contain" />
+              <img src="/clients/s-chand.png" alt="S. Chand" className="h-15 object-contain" />
+              <img src="/clients/lotus-leaf.png" alt="Lotus Leaf Pharmaceuticals" className="h-16 object-contain" />
+              <img src="/clients/care-india.png" alt="Care India Pharmaceuticals" className="h-15 object-contain" />
+              <img src="/clients/nirogam.png" alt="Nirogam" className="h-15 object-contain" />
+              <img src="/clients/qa-testing.png" alt="QA Testing Laboratories" className="h-15 object-contain" />
+              <img src="/clients/kinton-crafts.png" alt="Kinton Crafts" className="h-16 object-contain" />
+              <img src="/clients/btpl.png" alt="BTPL" className="h-15 object-contain" />
+              <img src="/clients/masia.png" alt="Masia" className="h-15 object-contain" />
+              <img src="/clients/sutra-gastropub.png" alt="Sutra The Gastropub" className="h-15 object-contain" />
+              <img src="/clients/kogta-financial.png" alt="Kogta Financial" className="h-15 object-contain" />
+              <img src="/clients/aavas-financiers.png" alt="Aavas Financiers" className="h-14 object-contain" />
+              <img src="/clients/tvs-credit.png" alt="TVS Credit" className="h-14 object-contain" />
+              <img src="/clients/su-vastika.png" alt="Su-vastika" className="h-14 object-contain" />
+            </div>
+            {/* Duplicate for infinite loop */}
+            <div className="marquee-content" aria-hidden="true">
+              <img src="/clients/muthoot-finance.png" alt="Muthoot Finance" className="h-14 object-contain" />
+              <img src="/clients/bajaj-finserv.png" alt="Bajaj Finserv" className="h-14 object-contain" />
+              <img src="/clients/bajaj-housing.png" alt="Bajaj Housing Finance" className="h-14 object-contain" />
+              <img src="/clients/lt-finance.png" alt="L&amp;T Finance" className="h-14 object-contain" />
+              <img src="/clients/shriram-automall.png" alt="Shriram Automall" className="h-15 object-contain" />
+              <img src="/clients/srei.png" alt="SREI" className="h-14 object-contain" />
+              <img src="/clients/s-chand.png" alt="S. Chand" className="h-15 object-contain" />
+              <img src="/clients/lotus-leaf.png" alt="Lotus Leaf Pharmaceuticals" className="h-16 object-contain" />
+              <img src="/clients/care-india.png" alt="Care India Pharmaceuticals" className="h-15 object-contain" />
+              <img src="/clients/nirogam.png" alt="Nirogam" className="h-15 object-contain" />
+              <img src="/clients/qa-testing.png" alt="QA Testing Laboratories" className="h-15 object-contain" />
+              <img src="/clients/kinton-crafts.png" alt="Kinton Crafts" className="h-16 object-contain" />
+              <img src="/clients/btpl.png" alt="BTPL" className="h-15 object-contain" />
+              <img src="/clients/masia.png" alt="Masia" className="h-15 object-contain" />
+              <img src="/clients/sutra-gastropub.png" alt="Sutra The Gastropub" className="h-15 object-contain" />
+              <img src="/clients/kogta-financial.png" alt="Kogta Financial" className="h-15 object-contain" />
+              <img src="/clients/aavas-financiers.png" alt="Aavas Financiers" className="h-14 object-contain" />
+              <img src="/clients/tvs-credit.png" alt="TVS Credit" className="h-14 object-contain" />
+              <img src="/clients/su-vastika.png" alt="Su-vastika" className="h-14 object-contain" />
+            </div>
+          </div>
+        </div>
       </section>
 
       <ImpactStats />

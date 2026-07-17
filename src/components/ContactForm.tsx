@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -13,8 +13,33 @@ export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  // Captcha State
+  const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, sum: 0 });
+  const [captchaInput, setCaptchaInput] = useState("");
+  const [captchaError, setCaptchaError] = useState("");
+
+  const generateCaptcha = () => {
+    const num1 = Math.floor(Math.random() * 9) + 1;
+    const num2 = Math.floor(Math.random() * 9) + 1;
+    setCaptcha({ num1, num2, sum: num1 + num2 });
+    setCaptchaInput("");
+    setCaptchaError("");
+  };
+
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Verify Captcha
+    if (parseInt(captchaInput, 10) !== captcha.sum) {
+      setCaptchaError("Incorrect answer. Please try again.");
+      generateCaptcha();
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Simulate form submission
@@ -134,6 +159,34 @@ export default function ContactForm() {
           placeholder="How can we help you?"
         />
       </div>
+
+      {/* Math Captcha */}
+      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <label htmlFor="captcha_input" className="mb-1.5 block text-sm font-medium text-navy">
+          Security Challenge <span className="text-red-500">*</span>
+        </label>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+          <span className="text-sm font-semibold text-slate-700 bg-white border border-slate-200 rounded-md px-3.5 py-2 min-w-[100px] text-center select-none shadow-sm">
+            {captcha.num1} + {captcha.num2} = ?
+          </span>
+          <input
+            type="number"
+            id="captcha_input"
+            required
+            aria-required="true"
+            value={captchaInput}
+            onChange={(e) => setCaptchaInput(e.target.value)}
+            className="w-full sm:w-32 rounded-md border border-slate-300 px-3.5 py-2 text-sm outline-none transition-all duration-200 focus:border-brand-blue focus:shadow-[0_0_0_3px_rgba(53,87,232,0.15)] focus-visible:outline-2 focus-visible:outline-brand-blue"
+            placeholder="Answer"
+          />
+        </div>
+        {captchaError && (
+          <p className="mt-2 text-xs font-semibold text-red-500 animate-pulse" role="alert">
+            {captchaError}
+          </p>
+        )}
+      </div>
+
       <button
         type="submit"
         disabled={isSubmitting}

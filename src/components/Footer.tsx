@@ -17,8 +17,8 @@ const companyLinks = [
 
 const resourceLinks = [
   { label: "Knowledge Center", href: "/knowledge-center" },
+  { label: "IP & Legal Tools", href: "/tools" },
   { label: "FAQs", href: "/faqs" },
-  { label: "Pricing / Fees", href: "/pricing" },
 ];
 
 const domesticLocations = [
@@ -86,9 +86,17 @@ export default function Footer() {
               <br />
               Powering businesses.
             </p>
-            <p className="mt-4 text-xs text-slate-400 max-w-xs leading-relaxed">
-              Regd. Office: Chamber No. 88, Street No. 4, District & Session Court, Surajpur, Greater Noida, Uttar Pradesh – 201306, India.
-            </p>
+            <div className="mt-4 space-y-2.5 text-[11px] text-slate-400 max-w-sm leading-relaxed">
+              <p>
+                <strong className="text-navy">Corporate Office:</strong> 308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India.
+              </p>
+              <p>
+                <strong className="text-navy">Regd. Office:</strong> District &amp; Session Court, Surajpur, Greater Noida, U.P., India.
+              </p>
+              <p>
+                <strong className="text-navy">Offices:</strong> Greater Noida • Ghaziabad • Bengaluru • Germany
+              </p>
+            </div>
             <div className="mt-5 flex gap-3">
               <a
                 href="mailto:ipr@iprani.com"
@@ -184,43 +192,45 @@ export default function Footer() {
           </Reveal>
         </div>
 
-        <hr className="my-10 border-slate-200" />
+        <hr className="my-10 border-slate-200 hidden" />
 
-        <Reveal direction="up" className="space-y-6 pb-4">
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
-              Our Services Are Available In Domestic Locations
-            </h4>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {domesticLocations.map((city) => (
-                <Link
-                  key={city}
-                  href={getDomesticSlug(city)}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
-                >
-                  {city}
-                </Link>
-              ))}
+        <div className="hidden" aria-hidden="true">
+          <Reveal direction="up" className="space-y-6 pb-4">
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
+                Our Services Are Available In Domestic Locations
+              </h4>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {domesticLocations.map((city) => (
+                  <Link
+                    key={city}
+                    href={getDomesticSlug(city)}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
+                  >
+                    {city}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
-              Our Services Are Available In International Locations
-            </h4>
-            <div className="mt-3 flex flex-wrap gap-2">
-              {internationalLocations.map((loc) => (
-                <Link
-                  key={loc.name}
-                  href={`/blogs/international-ip/${loc.slug}`}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
-                >
-                  {loc.name}
-                </Link>
-              ))}
+            <div>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-navy">
+                Our Services Are Available In International Locations
+              </h4>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {internationalLocations.map((loc) => (
+                  <Link
+                    key={loc.name}
+                    href={`/blogs/international-ip/${loc.slug}`}
+                    className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue hover:bg-brand-blue hover:text-white hover:shadow-sm"
+                  >
+                    {loc.name}
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
       </div>
 
       <div className="bg-navy px-4 py-4 sm:px-6 lg:px-8">

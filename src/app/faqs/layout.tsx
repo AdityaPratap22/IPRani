@@ -21,7 +21,7 @@ export default function FaqsLayout({ children }: { children: React.ReactNode }) 
         "name": "Do you offer fixed-fee pricing?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most of our services are fixed-fee once we understand the scope of your requirement. See our Pricing page for indicative ranges, or get a free consultation for an exact quote. We believe in transparent pricing with no hidden charges."
+          "text": "Most of our services are fixed-fee once we understand the scope of your requirement. Get in touch with us for a free consultation to receive a custom quote. We believe in transparent pricing with no hidden charges."
         }
       },
       {

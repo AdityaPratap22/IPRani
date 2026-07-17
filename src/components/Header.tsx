@@ -27,6 +27,7 @@ const simpleLinks = [
 ];
 
 const endLinks = [
+  { label: "Tools", href: "/tools" },
   { label: "Team", href: "/team" },
   { label: "Contact Us", href: "/contact-us" },
 ];

@@ -22,8 +22,18 @@ const contactInfo = [
   },
   {
     icon: PinIcon,
-    label: "Office Address",
+    label: "Corporate Office",
+    value: "308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India",
+  },
+  {
+    icon: PinIcon,
+    label: "Registered Office",
     value: "Chamber No. 88, Street No. 4, District & Session Court, Surajpur, Greater Noida, Uttar Pradesh – 201306, India",
+  },
+  {
+    icon: PinIcon,
+    label: "Other Offices",
+    value: "Bengaluru, India • Germany",
   },
   {
     icon: ClockIcon,
