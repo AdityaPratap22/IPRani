@@ -1138,7 +1138,7 @@ export const industries: Industry[] = [
   {
     name: "Universities & Academic Institutions",
     slug: "universities-academia",
-    tier: "second",
+    tier: "priority",
     tagline: "Commercializing academic research, securing patents, and structuring tech transfers.",
     summary: "IP policies, bulk patent filings, copyright protection, and technology licensing for educational institutions.",
     overview: "Universities and academic research centers are the powerhouses of deep-tech innovation, generating significant intellectual property. Managing this requires clear institutional IP policies, bulk patent and design filings, copyright protection for publications, and robust technology transfer and licensing agreements. We help universities safeguard their innovations, build research credibility, and monetize discoveries through structured commercialization channels.",

@@ -26,7 +26,7 @@ export default function RelatedLinks({
         }
       >
         {links.map((link, i) => (
-          <li key={link.href}>
+          <li key={`${link.href}-${i}`}>
             <Reveal index={i} direction="none">
               <Link
                 href={link.href}
