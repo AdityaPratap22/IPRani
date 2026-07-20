@@ -38,7 +38,7 @@ export const priorityIndustriesNav = [
   { name: "Fintech & NBFCs", slug: "fintech-nbfc" },
   { name: "Healthcare & Life Sciences", slug: "healthcare-pharma" },
   { name: "Media & Entertainment", slug: "media-entertainment" },
-  { name: "Universities & Academia", slug: "universities-academia" },
+  { name: "Education Institutions", slug: "universities-academia" },
 ];
 
 export const clustersNav = [

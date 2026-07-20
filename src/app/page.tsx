@@ -197,7 +197,7 @@ const industries = [
   { icon: LaptopIcon, label: "SaaS & Tech", slug: "saas-tech" },
   { icon: CartIcon, label: "D2C & E-commerce", slug: "d2c-ecommerce" },
   { icon: FactoryIcon, label: "Manufacturing", slug: "manufacturing" },
-  { icon: AcademicIcon, label: "Universities", slug: "universities-academia" },
+  { icon: AcademicIcon, label: "Education Institutions", slug: "universities-academia" },
 ];
 
 const whyUs = [

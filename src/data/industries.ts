@@ -1136,12 +1136,12 @@ export const industries: Industry[] = [
     ]
   },
   {
-    name: "Universities & Academic Institutions",
+    name: "Education Institutions",
     slug: "universities-academia",
     tier: "priority",
     tagline: "Commercializing academic research, securing patents, and structuring tech transfers.",
-    summary: "IP policies, bulk patent filings, copyright protection, and technology licensing for educational institutions.",
-    overview: "Universities and academic research centers are the powerhouses of deep-tech innovation, generating significant intellectual property. Managing this requires clear institutional IP policies, bulk patent and design filings, copyright protection for publications, and robust technology transfer and licensing agreements. We help universities safeguard their innovations, build research credibility, and monetize discoveries through structured commercialization channels.",
+    summary: "IP policies, patent filings, copyright protection, and technology licensing for educational institutions.",
+    overview: "Education institutions and academic research centers are the powerhouses of deep-tech innovation, generating significant intellectual property. Managing this requires clear institutional IP policies, patent and design filings, copyright protection for publications, and robust technology transfer and licensing agreements. We help educational institutions safeguard their innovations, build research credibility, and monetize discoveries through structured commercialization channels.",
     stats: [
       { value: "1000+", label: "Academic Patents & Designs Filed" },
       { value: "15+", label: "Technology Transfer Agreements Executed" },
@@ -1151,7 +1151,7 @@ export const industries: Industry[] = [
     challenges: [
       {
         title: "Lack of Clear Institutional IP Policies",
-        description: "Unclear ownership rules between students, researchers, professors, and the university frequently lead to ownership disputes and prevent successful licensing."
+        description: "Unclear ownership rules between students, researchers, professors, and the institution frequently lead to ownership disputes and prevent successful licensing."
       },
       {
         title: "Complex Technology Transfer & Licensing",
@@ -1162,7 +1162,7 @@ export const industries: Industry[] = [
         description: "Publishing research papers, theses, or presenting at seminars before filing patent applications destroys novelty and bars patent grants globally."
       },
       {
-        title: "Bulk Portfolio Maintenance Costs",
+        title: "Portfolio Maintenance Costs",
         description: "Managing, auditing, and paying maintenance/renewal fees for a large portfolio of patents and designs across multiple departments requires centralized, expert oversight."
       }
     ],
@@ -1174,13 +1174,13 @@ export const industries: Industry[] = [
       },
       {
         step: 2,
-        title: "Bulk Patent & Design Filings",
-        description: "Our registered patent agents streamline patent drafting and filing in bulk at subsidized government fees for academic institutions."
+        title: "Patent & Design Filings",
+        description: "Our registered patent agents streamline patent drafting and filing at subsidized government fees for academic institutions."
       },
       {
         step: 3,
         title: "Technology Transfer & Licensing",
-        description: "We structure, draft, and negotiate licensing and technology transfer agreements between universities and industrial partners."
+        description: "We structure, draft, and negotiate licensing and technology transfer agreements between educational institutions and industrial partners."
       },
       {
         step: 4,
@@ -1190,7 +1190,7 @@ export const industries: Industry[] = [
     ],
     risks: [
       "Loss of patent novelty due to premature publication in journals or academic conferences.",
-      "Litigation over IP ownership between research sponsors, universities, and individual students.",
+      "Litigation over IP ownership between research sponsors, educational institutions, and individual students.",
       "Unenforceable or one-sided commercial licensing agreements with corporate partners.",
       "Failing to claim statutory DPIIT/academic fee concessions for government filing fees."
     ],
@@ -1214,27 +1214,27 @@ export const industries: Industry[] = [
     faqs: [
       {
         q: "Who owns the IP developed by a student or researcher?",
-        a: "Under standard academic IP policies, the university owns the IP if it is developed using university resources, but the student is listed as the inventor and receives a share of licensing royalties."
+        a: "Under standard academic IP policies, the educational institution owns the IP if it is developed using institutional resources, but the student is listed as the inventor and receives a share of licensing royalties."
       },
       {
-        q: "Why is IP licensing important for universities?",
-        a: "IP licensing is the process of commercializing university research. It allows corporate partners to manufacture and sell the product in exchange for paying royalties to the university."
+        q: "Why is IP licensing important for educational institutions?",
+        a: "IP licensing is the process of commercializing research. It allows corporate partners to manufacture and sell the product in exchange for paying royalties to the educational institution."
       },
       {
-        q: "Do universities get government fee concessions for IP filing in India?",
+        q: "Do educational institutions get government fee concessions for IP filing in India?",
         a: "Yes, the Indian Patent Office offers up to an 80% concession on filing fees for recognized educational institutions and universities."
       },
       {
         q: "Can a research sponsor claim sole ownership of research outcomes?",
-        a: "It depends on the sponsored research agreement. Typically, universities retain IP ownership but grant the sponsor a first right of refusal for an exclusive commercial license."
+        a: "It depends on the sponsored research agreement. Typically, educational institutions retain IP ownership but grant the sponsor a first right of refusal for an exclusive commercial license."
       },
       {
         q: "What is technology transfer in academia?",
         a: "Technology transfer is the formal transfer of scientific findings, patents, and software from academic research to corporate entities for public and commercial use."
       },
       {
-        q: "How can a university prevent premature disclosure of research?",
-        a: "By requiring researchers to submit an Invention Disclosure Form (IDF) to the university's IPR Cell at least 30 days before submitting a paper to a journal or conference."
+        q: "How can an educational institution prevent premature disclosure of research?",
+        a: "By requiring researchers to submit an Invention Disclosure Form (IDF) to the institution's IPR Cell at least 30 days before submitting a paper to a journal or conference."
       }
     ]
   }

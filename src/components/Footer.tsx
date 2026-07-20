@@ -91,7 +91,7 @@ export default function Footer() {
                 <strong className="text-navy">Corporate Office:</strong> 308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India.
               </p>
               <p>
-                <strong className="text-navy">Regd. Office:</strong> District &amp; Session Court, Surajpur, Greater Noida, U.P., India.
+                <strong className="text-navy">Regd. Office: </strong> Chamber No. 88, Street No. 4,District &amp; Session Court, Surajpur, Greater Noida, U.P. - 201306, India.
               </p>
               <p>
                 <strong className="text-navy">Offices:</strong> Greater Noida • Ghaziabad • Bengaluru • Germany
