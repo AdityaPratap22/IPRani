@@ -160,6 +160,22 @@ export const serviceVerticals: ServiceVertical[] = [
           leaf("Strategic Representation", "representation", "IP Prosecution", "Intellectual Property"),
         ],
       },
+      {
+        name: "IP Litigation",
+        slug: "ip-litigation",
+        summary: "Enforcement and defense of trademark, patent, design, and copyright rights.",
+        description: "Our IP Litigation practice defends and enforces your trademarks, patents, designs, and copyrights against infringement, counterfeiting, and unauthorized commercial exploitation.",
+        subServices: [
+          leaf("Trademark Infringement Suits", "trademark-infringement", "IP Litigation", "Intellectual Property"),
+          leaf("Patent Infringement & Injunctions", "patent-infringement", "IP Litigation", "Intellectual Property"),
+          leaf("Copyright Enforcement & Piracy", "copyright-enforcement", "IP Litigation", "Intellectual Property"),
+          leaf("Design Infringement Action", "design-infringement", "IP Litigation", "Intellectual Property"),
+          leaf("Anti-Counterfeiting Action", "anti-counterfeiting", "IP Litigation", "Intellectual Property"),
+          leaf("Passing Off & Unfair Competition", "passing-off", "IP Litigation", "Intellectual Property"),
+          leaf("Domain Name & UDRP Disputes", "domain-name-udrp", "IP Litigation", "Intellectual Property"),
+          leaf("Customs & Border Enforcement", "customs-border-enforcement", "IP Litigation", "Intellectual Property"),
+        ],
+      },
     ],
   },
   {
@@ -169,6 +185,25 @@ export const serviceVerticals: ServiceVertical[] = [
     description:
       "Our Corporate Legal practice covers company formation, contract drafting and ROC compliance — the legal essentials every growing business needs in place.",
     hubs: [
+      {
+        name: "Commercial",
+        slug: "commercial",
+        summary: "Commercial contract drafting, corporate advisory, legal due diligence, and regulatory compliance.",
+        description:
+          "Our Commercial practice provides end-to-end support for contract drafting, review, corporate advisory, secretarial governance, legal due diligence, and transaction risk assessment.",
+        subServices: [
+          leaf("Contract Drafting & Documentation", "contract-drafting-documentation", "Commercial", "Corporate Legal"),
+          leaf("Contract Review & Negotiation", "contract-review-negotiation", "Commercial", "Corporate Legal"),
+          leaf("Commercial Agreements", "commercial-agreements", "Commercial", "Corporate Legal"),
+          leaf("Corporate Advisory", "corporate-advisory", "Commercial", "Corporate Legal"),
+          leaf("Corporate Governance & Secretarial Advisory", "corporate-governance-secretarial-advisory", "Commercial", "Corporate Legal"),
+          leaf("Legal Due Diligence", "legal-due-diligence", "Commercial", "Corporate Legal"),
+          leaf("Regulatory & Compliance Advisory", "regulatory-compliance-advisory", "Commercial", "Corporate Legal"),
+          leaf("Startup & Business Advisory", "startup-business-advisory", "Commercial", "Corporate Legal"),
+          leaf("Legal Opinions & Advisory", "legal-opinions-advisory", "Commercial", "Corporate Legal"),
+          leaf("Transaction Support & Risk Assessment", "transaction-support-risk-assessment", "Commercial", "Corporate Legal"),
+        ],
+      },
       {
         name: "Company Formation",
         slug: "company-formation",
@@ -229,7 +264,16 @@ export const serviceVerticals: ServiceVertical[] = [
         summary: "Enforcement action across trademark, patent, design and copyright disputes.",
         description:
           "We enforce IP rights through infringement suits, injunctions and anti-counterfeiting action, working closely with our Trademark, Patent, Design and Copyright teams.",
-        subServices: [],
+        subServices: [
+          leaf("Trademark Infringement Suits", "trademark-infringement", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Patent Infringement & Injunctions", "patent-infringement", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Copyright Enforcement & Piracy", "copyright-enforcement", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Design Infringement Action", "design-infringement", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Anti-Counterfeiting Action", "anti-counterfeiting", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Passing Off & Unfair Competition", "passing-off", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Domain Name & UDRP Disputes", "domain-name-udrp", "IP Litigation & Enforcement", "Litigation"),
+          leaf("Customs & Border Enforcement", "customs-border-enforcement", "IP Litigation & Enforcement", "Litigation"),
+        ],
       },
       {
         name: "Commercial Litigation",
@@ -307,10 +351,10 @@ export function findSubService(verticalSlug: string, hubSlug: string, subService
 }
 
 export const topServiceLinks = [
-  { label: "Trademark Filing", href: "/services/intellectual-property/trademark/filing-drafting" },
-  { label: "Patent Drafting & Filing", href: "/services/intellectual-property/patent/drafting-filing" },
-  { label: "Copyright Registration", href: "/services/intellectual-property/copyright/registration" },
-  { label: "Design Registration", href: "/services/intellectual-property/design/drafting-filing" },
-  { label: "Company Registration", href: "/services/corporate-legal/company-formation/private-limited-company" },
-  { label: "Litigation & Recovery", href: "/services/litigation" },
+  { label: "Patent", href: "/services/intellectual-property/patent/drafting-filing" },
+  { label: "Trademark", href: "/services/intellectual-property/trademark/filing-drafting" },
+  { label: "Copyright", href: "/services/intellectual-property/copyright/registration" },
+  { label: "Design", href: "/services/intellectual-property/design/drafting-filing" },
+  { label: "Company Formation", href: "/services/corporate-legal/company-formation/private-limited-company" },
+  { label: "Litigation", href: "/services/litigation" },
 ];

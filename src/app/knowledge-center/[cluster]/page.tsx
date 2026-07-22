@@ -7,6 +7,7 @@ import Reveal from "@/components/motion/Reveal";
 import { clusters, findCluster } from "@/data/knowledgeCenter";
 import { ArrowRightIcon } from "@/components/icons";
 import { generateLegalContent } from "@/data/knowledgeCenterGenerator";
+import TrademarkProcessFlowchart from "@/components/TrademarkProcessFlowchart";
 
 export function generateStaticParams() {
   return clusters.map((c) => ({ cluster: c.slug }));
@@ -77,6 +78,12 @@ export default async function ClusterPage({
                 </Reveal>
               ))}
             </div>
+
+            {data.slug === "trademark-guide" && (
+              <div className="mt-12">
+                <TrademarkProcessFlowchart />
+              </div>
+            )}
 
             {/* Comprehensive Handbook Overview Content (2000-3000 words) */}
             <div className="mt-12 pt-10 border-t border-slate-200">

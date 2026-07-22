@@ -9,36 +9,62 @@ export const metadata = {
   description: "Get in touch with IP Rani for free consultations regarding your intellectual property, trademarks, patents, company formation, and commercial legal queries in India.",
 };
 
-const contactInfo = [
+type ContactItem = {
+  text: string;
+  note?: string;
+  href?: string;
+};
+
+type ContactGroup = {
+  icon: typeof PhoneIcon;
+  label: string;
+  items: ContactItem[];
+};
+
+const contactInfo: ContactGroup[] = [
   {
     icon: PhoneIcon,
     label: "Phone Support",
-    value: "+91 99116 55010 (General & IP) / +91 97588 67451 (Legal)",
+    items: [
+      { text: "+91 99116 55010", note: "(General & IP)", href: "tel:+919911655010" },
+      { text: "+91 97588 67451", note: "(Legal)", href: "tel:+919758867451" },
+    ],
   },
   {
     icon: MailIcon,
     label: "Email Address",
-    value: "ipr@iprani.com (IP Matters) / legal@iprani.com (Legal Matters)",
+    items: [
+      { text: "ipr@iprani.com", note: "(IP Matters)", href: "mailto:ipr@iprani.com" },
+      { text: "legal@iprani.com", note: "(Legal Matters)", href: "mailto:legal@iprani.com" },
+    ],
   },
   {
     icon: PinIcon,
     label: "Corporate Office",
-    value: "308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India",
+    items: [
+      { text: "308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India" },
+    ],
   },
   {
     icon: PinIcon,
     label: "Registered Office",
-    value: "Chamber No. 88, Street No. 4, District & Session Court, Surajpur, Greater Noida, Uttar Pradesh – 201306, India",
+    items: [
+      { text: "Chamber No. 88, District & Session Court, Street No. 4, Surajpur, Greater Noida, Uttar Pradesh – 201306, India" },
+    ],
   },
   {
     icon: PinIcon,
     label: "Other Offices",
-    value: "Bengaluru, India • Germany",
+    items: [
+      { text: "Bengaluru, India • Germany" },
+    ],
   },
   {
     icon: ClockIcon,
     label: "Business Hours",
-    value: "Monday to Friday: 10:00 AM – 5:00 PM",
+    items: [
+      { text: "Mon-Fri 10AM to 6PM, Sat 10AM to 2PM" },
+    ],
   },
 ];
 
@@ -76,9 +102,24 @@ export default function ContactPage() {
                     <p className="text-sm font-semibold text-navy">
                       {item.label}
                     </p>
-                    <p className="mt-0.5 text-sm text-slate-500">
-                      {item.value}
-                    </p>
+                    <div className="mt-0.5 space-y-0.5">
+                      {item.items.map((sub, idx) => (
+                        <p key={idx} className="text-sm text-slate-500">
+                          {sub.href ? (
+                            <a href={sub.href} className="hover:text-brand-blue transition-colors font-medium">
+                              {sub.text}
+                            </a>
+                          ) : (
+                            <span>{sub.text}</span>
+                          )}
+                          {sub.note && (
+                            <span className="ml-1.5 text-slate-400 text-xs font-normal">
+                              {sub.note}
+                            </span>
+                          )}
+                        </p>
+                      ))}
+                    </div>
                   </div>
                 </Reveal>
               ))}
@@ -93,11 +134,26 @@ export default function ContactPage() {
 
       <section className="bg-bg-light-2 px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <Reveal inView={false}><h2 className="text-2xl font-bold text-navy">Find Us</h2></Reveal>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <Reveal inView={false}><h2 className="text-2xl font-bold text-navy">Find Us</h2></Reveal>
+            <Reveal inView={false}>
+              <a
+                href="https://maps.app.goo.gl/TUgqv5PdQUQYZdvY6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-brand-blue hover:text-brand-blue-dark transition-colors"
+              >
+                Open in Google Maps
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </Reveal>
+          </div>
           <Reveal inView={false} className="mt-6 overflow-hidden rounded-2xl border border-slate-200">
             <iframe
-              title="IP Rani office location map"
-              src="https://www.openstreetmap.org/export/embed.html?bbox=77.45%2C28.49%2C77.53%2C28.55&layer=mapnik&marker=28.5204%2C77.4912"
+              title="IP Rani Registered Office location map"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=77.475%2C28.500%2C77.491%2C28.515&layer=mapnik&marker=28.5075949%2C77.4832064"
               className="h-80 w-full"
               loading="lazy"
             />

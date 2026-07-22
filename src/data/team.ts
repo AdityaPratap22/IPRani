@@ -17,20 +17,21 @@ export const team: TeamMember[] = [
     slug: "nk-sethi",
     role: "Founder & Registered IP Attorney",
     image: "/team/nk-sethi.jpg",
-    bio: "N. K. Sethi founded IP Rani with a vision to provide world-class intellectual property and corporate legal solutions. He specializes in Civil & Commercial Litigation, Criminal Matters, and Matrimonial Cases.",
+    bio: "N. K. Sethi founded IP Rani with a vision to provide world-class intellectual property and corporate legal solutions. He mainly practices in Civil, Criminal, Corporate, and Matrimonial law.",
     extendedBio:
-      "With over two decades of experience in Indian courts and tribunals, N. K. Sethi is the visionary founder of IP Rani. He has successfully represented corporate and private clients before the Delhi High Court, Supreme Court of India, IPAB (now the High Court IP Division), and various District Courts across Northern India. His deep expertise in civil disputes, commercial litigation, complex criminal trials, and sensitive matrimonial proceedings has earned him a stellar reputation. As a senior Registered IP Attorney, he also advises boards on IP enforcement, cross-border asset seizures, and brand protection strategies in India.",
-    focus: ["IP Enforcement", "Civil & Commercial Litigation", "Matrimonial & Criminal Law"],
+      "With over three decades of experience in Indian courts and tribunals, N. K. Sethi is the founder of IP Rani. Enrolled as an advocate in 1990, he is a Registered IP Attorney and SIPP Facilitator who mainly practices in Civil, Criminal, Corporate, and Matrimonial law. He has successfully represented corporate and private clients before the Supreme Court of India, the Delhi High Court, and various district courts. His deep expertise in civil disputes, corporate compliance, trials, and matrimonial proceedings has earned him a stellar reputation. He also advises boards on brand protection and enforcement strategies in India.",
+    focus: ["Civil & Criminal Litigation", "Corporate & Matrimonial Law", "IP Enforcement"],
     highlights: [
-      { label: "Experience", value: "20+ Years" },
+      { label: "Experience", value: "35+ Years" },
       { label: "Cases Led", value: "500+" },
       { label: "Courts Practiced", value: "15+" },
       { label: "Countries Served", value: "50+" },
     ],
     qualifications: [
-      "LL.B — Campus Law Centre, University of Delhi",
-      "Registered Patent & Trademark Attorney",
-      "Enrolled Advocate — Bar Council of India",
+      "LL.B",
+      "Registered Trademark Attorney",
+      "Official SIPP Facilitator (Startups IP Protection)",
+      "Enrolled Advocate (1990) — Bar Council of India",
       "Member — International Trademark Association (INTA)",
     ],
     services: [
@@ -45,11 +46,11 @@ export const team: TeamMember[] = [
   {
     name: "Prashant Sethi",
     slug: "prashant-sethi",
-    role: "Managing Partner & SIPP Facilitator",
+    role: "Managing Partner & Registered IP Attorney",
     image: "/team/prashant-sethi.jpg",
-    bio: "Prashant leads the firm's client operations. He is a Registered IP Attorney with expertise in IP Prosecution, IP & Commercial Litigation, and Startup Legal Structuring.",
+    bio: "Prashant Sethi is the Managing Partner of IP Rani. A Registered IP Attorney, he specializes in IP & Commercial Litigation and Prosecution, including trademark, patent, and design filings.",
     extendedBio:
-      "Prashant Sethi oversees client operations and growth strategy at IP Rani. As Managing Partner and a recognized SIPP Facilitator, he specializes in trademark and patent prosecution, advising over 200 startups on entity registration, founder agreements, and ESOP designs. His expertise covers the entire lifecycle of IP prosecution — clearance searches, filing multi-class applications, and successfully navigating official trademark/patent objections and hearings. He is also a seasoned litigator handling high-stakes intellectual property and commercial contract disputes before High Courts and appellate bodies.",
+      "Prashant Sethi is the Managing Partner of IP Rani and a Registered IP Attorney. Enrolled as an advocate in 2022, he has expertise in IP & Commercial Litigation and Prosecution, including drafting, hearings, oppositions, IP licensing, and international filings of Trademark, Patent, and Designs. He also advises startups on brand protection strategies and business contracts.",
     focus: ["IP Prosecution", "IP & Commercial Litigation", "Startup Advisory"],
     highlights: [
       { label: "Trademarks Filed", value: "1000+" },
@@ -58,10 +59,10 @@ export const team: TeamMember[] = [
       { label: "Success Rate", value: "95%" },
     ],
     qualifications: [
-      "B.A. LL.B — Amity Law School",
-      "Registered Patent & Trademark Attorney",
+      "B.A. LL.B",
+      "Registered Trademark Attorney",
       "Official SIPP Facilitator (Startups IP Protection)",
-      "Enrolled Advocate — Bar Council of India",
+      "Enrolled Advocate (2022) — Bar Council of India",
     ],
     services: [
       "Trademark & Patent Search, Filing & Prosecution",
@@ -77,9 +78,9 @@ export const team: TeamMember[] = [
     slug: "sushant-shekhar",
     role: "Co-Founder & Registered IP Attorney",
     image: "/team/sushant-shekhar.jpg",
-    bio: "Sushant specializes in commercial contracts, corporate compliance, and banking litigation. He is a Co-Founder, SIPP Facilitator, and expert in DRT and NCLT matters.",
+    bio: "Sushant Shekhar is the Co-Founder of IP Rani. A Registered IP Attorney and SIPP Facilitator, he mainly practices in commercial disputes, banking litigation, and matters before the DRT and NCLT.",
     extendedBio:
-      "Sushant Shekhar is the operational Co-Founder of IP Rani and a registered SIPP Facilitator. His practice centers on commercial contract drafting, technological licensing, and technology transfers. Sushant also has extensive experience in banking litigation, representing financial institutions and corporate clients before the Debt Recovery Tribunal (DRT) and the National Company Law Tribunal (NCLT) in insolvency and asset recovery matters. He oversees the firm's ROC and corporate compliance division, assisting businesses with Companies Act compliance and annual filings.",
+      "Sushant Shekhar is the Co-Founder of IP Rani. Enrolled as an advocate in 2012, he is a Registered IP Attorney and SIPP Facilitator practicing mainly in commercial disputes, banking litigation, and insolvency matters. He regularly represents financial institutions and corporate clients before the Debt Recovery Tribunal (DRT) and the National Company Law Tribunal (NCLT). In addition to litigation, he advises businesses on commercial contracts, licensing agreements, and corporate compliance.",
     focus: ["Contracts & IP Licensing", "Banking & DRT/NCLT Litigation", "ROC Compliance"],
     highlights: [
       { label: "Contracts Drafted", value: "800+" },
@@ -88,11 +89,11 @@ export const team: TeamMember[] = [
       { label: "Licensing Deals", value: "100+" },
     ],
     qualifications: [
-      "LL.M — National Law University",
-      "BA. LL.B — IP University, Delhi",
-      "Registered Patent & Trademark Attorney",
+      "LL.M",
+      "B.A. LL.B",
+      "Registered Trademark Attorney",
       "Official SIPP Facilitator (Startups IP Protection)",
-      "Enrolled Advocate — Bar Council of India",
+      "Enrolled Advocate (2012) — Bar Council of India",
     ],
     services: [
       "Commercial Contract & Technology Agreement Drafting",
@@ -106,9 +107,9 @@ export const team: TeamMember[] = [
   {
     name: "Mohit Gautam",
     slug: "mohit-gautam",
-    role: "Registered IP Attorney",
+    role: "Associate Advocate",
     image: "/team/mohit-gautam.jpg",
-    bio: "Mohit Gautam is a Registered IP Attorney specializing in trademark filings, clearance searches, and official prosecution before the Trademark Registry.",
+    bio: "Mohit Gautam is an Associate Advocate specializing in trademark filings, clearance searches, and official prosecution before the Trademark Registry.",
     extendedBio:
       "Mohit Gautam is a dedicated intellectual property specialist at IP Rani. With a deep focus on trademark law and prosecution, he manages brand clearance operations, filings, and official objection replies. Mohit works closely with startups and D2C brands to secure trademark protection in India and international markets, representing clients during registry show-cause hearings and opposition proceedings.",
     focus: ["Trademark Filings", "IP Prosecution", "Brand Clearance"],
@@ -119,9 +120,9 @@ export const team: TeamMember[] = [
       { label: "Client Rating", value: "4.9/5" },
     ],
     qualifications: [
-      "B.A. LL.B — Guru Gobind Singh Indraprastha University",
-      "Registered Patent & Trademark Attorney",
-      "Enrolled Advocate — Bar Council of India",
+      "B.A. LL.B",
+      "Registered Trademark Attorney",
+      "Enrolled Advocate (2024) — Bar Council of India",
     ],
     services: [
       "Trademark Public Clearance Searches",
@@ -147,8 +148,8 @@ export const team: TeamMember[] = [
       { label: "Client Rating", value: "4.8/5" },
     ],
     qualifications: [
-      "LL.B — Faculty of Law, University of Delhi",
-      "Enrolled Advocate — Bar Council of India",
+      "LL.B",
+      "Enrolled Advocate (2026) — Bar Council of India",
       "Member — Delhi High Court Bar Association",
     ],
     services: [
@@ -175,8 +176,8 @@ export const team: TeamMember[] = [
       { label: "Client Rating", value: "4.8/5" },
     ],
     qualifications: [
-      "B.A., LL.B — University of Delhi",
-      "Enrolled Advocate — Bar Council of India",
+      "B.A. LL.B",
+      "Enrolled Advocate (2024) — Bar Council of India",
       "Member — District Court Bar Association",
     ],
     services: [

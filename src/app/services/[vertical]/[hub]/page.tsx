@@ -8,6 +8,7 @@ import { serviceVerticals, findHub } from "@/data/services";
 import { industries } from "@/data/industries";
 import { clusters } from "@/data/knowledgeCenter";
 import { ArrowRightIcon } from "@/components/icons";
+import TrademarkProcessFlowchart from "@/components/TrademarkProcessFlowchart";
 
 export function generateStaticParams() {
   return serviceVerticals.flatMap((v) =>
@@ -101,6 +102,12 @@ export default async function HubPage({
             <p className="max-w-2xl text-sm text-slate-500">
               {hubData.description}
             </p>
+          )}
+
+          {hubData.slug === "trademark" && (
+            <div className="mt-16">
+              <TrademarkProcessFlowchart />
+            </div>
           )}
 
           <div className="mt-14 grid gap-10 sm:grid-cols-2">

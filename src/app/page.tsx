@@ -3,6 +3,8 @@ import Stats from "@/components/Stats";
 import ImpactStats from "@/components/ImpactStats";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/motion/Reveal";
+import HeroBanners from "@/components/HeroBanners";
+
 
 export const metadata = {
   title: "IP Rani | IP & Legal Solutions for Businesses",
@@ -235,16 +237,12 @@ export default function Home() {
       <section className="relative overflow-hidden bg-gradient-to-r from-bg-light via-bg-light-2 to-white shadow-[0_20px_35px_-15px_rgba(13,43,82,0.35)]">
         {/* Desktop: photo blended into the right side of the hero */}
         <Reveal inView={false} direction="right" className="absolute inset-y-0 right-0 hidden w-[64%] lg:block">
-          <img
-            src="/hero.webp"
-            alt="IP Rani team advising a client on legal and IP strategies"
-            className="h-full w-full object-cover object-center transition-transform duration-700 hover:scale-105"
-          />
-          {/* fade only blends the left seam so the lady stays fully visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-bg-light-2 to-transparent to-14%" />
+          <HeroBanners />
+          {/* fade only blends the left seam so the sliding banners blend nicely */}
+          <div className="absolute inset-y-0 left-0 w-[45%] bg-gradient-to-r from-bg-light-2 via-bg-light-2/70 to-transparent z-10" />
         </Reveal>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-36">
+        <div className="relative z-20 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-36">
           <Reveal inView={false} direction="left" className="lg:max-w-lg">
             <h1 className="text-4xl font-bold leading-[1.18] text-navy sm:text-5xl">
               Protect Your
@@ -277,11 +275,9 @@ export default function Home() {
 
           {/* Mobile: photo stacked below the text */}
           <div className="mt-10 lg:hidden">
-            <img
-              src="/hero.webp"
-              alt="IP Rani team advising a client"
-              className="h-64 w-full rounded-2xl object-cover shadow-lg"
-            />
+            <div className="h-72 sm:h-80 w-full overflow-hidden rounded-2xl shadow-lg relative">
+              <HeroBanners />
+            </div>
           </div>
         </div>
       </section>

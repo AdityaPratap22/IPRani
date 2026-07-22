@@ -7,6 +7,7 @@ export const serviceVerticalsNav = [
       { name: "Patent", slug: "patent" },
       { name: "Design", slug: "design" },
       { name: "Copyright", slug: "copyright" },
+      { name: "IP Litigation", slug: "ip-litigation" },
       { name: "IP Advisory", slug: "ip-advisory" },
     ]
   },
@@ -14,6 +15,7 @@ export const serviceVerticalsNav = [
     name: "Corporate Legal",
     slug: "corporate-legal",
     hubs: [
+      { name: "Commercial", slug: "commercial" },
       { name: "Company Formation", slug: "company-formation" },
       { name: "Contract Drafting", slug: "contract-drafting" },
       { name: "ROC Compliance", slug: "roc-compliance" },
