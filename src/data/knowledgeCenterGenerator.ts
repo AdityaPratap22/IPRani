@@ -107,7 +107,7 @@ const templates: Record<string, CategoryTemplate> = {
       {
         title: "DPIIT Recognition and Statutory Tax Benefits",
         paragraphs: [
-          "The Department for Promotion of Industry and Internal Trade (DPIIT) offers recognition to startups, unlocking benefits like tax exemptions under Section 80-IAC of the Income Tax Act, self-certification under labor and environmental laws, and fast-track patent processing.",
+          "The Department for Promotion of Industry and Internal Trade (DPIIT) offers recognition to startups, unlocking benefits like tax exemptions under Section 80-IAC of the Income Tax Act, self-certification under labour and environmental laws, and fast-track patent processing.",
           "Startups must comply with ROC filings, maintaining minutes of board meetings, and auditing financial statements annually. Non-compliance results in heavy penalties, suspension of director DINs, and can lead to the company being blacklisted by investors."
         ]
       }

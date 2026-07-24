@@ -34,12 +34,12 @@ export const serviceVerticalsNav = [
 
 export const priorityIndustriesNav = [
   { name: "Startups", slug: "startups" },
-  { name: "SaaS & Tech", slug: "saas-tech" },
+  { name: "IT & Tech", slug: "saas-tech" },
   { name: "D2C & E-commerce", slug: "d2c-ecommerce" },
   { name: "Manufacturing", slug: "manufacturing" },
+  { name: "Pharmaceuticals", slug: "healthcare-pharma" },
+  { name: "Entertainment & Media", slug: "media-entertainment" },
   { name: "Fintech & NBFCs", slug: "fintech-nbfc" },
-  { name: "Healthcare & Life Sciences", slug: "healthcare-pharma" },
-  { name: "Media & Entertainment", slug: "media-entertainment" },
   { name: "Education Institutions", slug: "universities-academia" },
 ];
 

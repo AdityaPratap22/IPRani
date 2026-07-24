@@ -3,7 +3,7 @@ import Stats from "@/components/Stats";
 import ImpactStats from "@/components/ImpactStats";
 import CtaBanner from "@/components/CtaBanner";
 import Reveal from "@/components/motion/Reveal";
-import HeroBanners from "@/components/HeroBanners";
+import HeroSection from "@/components/HeroSection";
 
 
 export const metadata = {
@@ -29,6 +29,7 @@ import {
   ShieldIcon,
   GlobeIcon,
   AcademicIcon,
+  PillIcon,
 } from "@/components/icons";
 
 const practiceAreas = [
@@ -196,9 +197,12 @@ const otherServices = [
 
 const industries = [
   { icon: RocketIcon, label: "Startups", slug: "startups" },
-  { icon: LaptopIcon, label: "SaaS & Tech", slug: "saas-tech" },
+  { icon: LaptopIcon, label: "IT & Tech", slug: "saas-tech" },
   { icon: CartIcon, label: "D2C & E-commerce", slug: "d2c-ecommerce" },
   { icon: FactoryIcon, label: "Manufacturing", slug: "manufacturing" },
+  { icon: PillIcon, label: "Pharmaceutical", slug: "healthcare-pharma" },
+  { icon: CameraIcon, label: "Entertainment", slug: "media-entertainment" },
+  { icon: ShieldIcon, label: "Fintech & NBFCs", slug: "fintech-nbfc" },
   { icon: AcademicIcon, label: "Education Institutions", slug: "universities-academia" },
 ];
 
@@ -234,53 +238,7 @@ const reviews = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-r from-bg-light via-bg-light-2 to-white shadow-[0_20px_35px_-15px_rgba(13,43,82,0.35)]">
-        {/* Desktop: photo blended into the right side of the hero */}
-        <Reveal inView={false} direction="right" className="absolute inset-y-0 right-0 hidden w-[64%] lg:block">
-          <HeroBanners />
-          {/* fade only blends the left seam so the sliding banners blend nicely */}
-          <div className="absolute inset-y-0 left-0 w-[45%] bg-gradient-to-r from-bg-light-2 via-bg-light-2/70 to-transparent z-10" />
-        </Reveal>
-
-        <div className="relative z-20 mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-36">
-          <Reveal inView={false} direction="left" className="lg:max-w-lg">
-            <h1 className="text-4xl font-bold leading-[1.18] text-navy sm:text-5xl">
-              Protect Your
-              <br />
-              Innovation.
-              <br />
-              Build Your Business
-              <br />
-              With Confidence.
-            </h1>
-            <p className="mt-5 max-w-md text-base text-slate-500">
-              End-to-end IP &amp; Legal solutions for start-ups, enterprises and
-              growing businesses.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/contact-us"
-                className="rounded-md bg-brand-blue px-6 py-3 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-brand-blue-dark hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
-              >
-                Get Free Consultation
-              </Link>
-              <Link
-                href="/services"
-                className="rounded-md border border-navy px-6 py-3 text-sm font-semibold text-navy transition-all duration-200 hover:-translate-y-0.5 hover:bg-bg-light focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
-              >
-                Explore Services
-              </Link>
-            </div>
-          </Reveal>
-
-          {/* Mobile: photo stacked below the text */}
-          <div className="mt-10 lg:hidden">
-            <div className="h-72 sm:h-80 w-full overflow-hidden rounded-2xl shadow-lg relative">
-              <HeroBanners />
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       <Stats />
 
@@ -413,12 +371,12 @@ export default function Home() {
               Industries We Serve
             </h2>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-4 xl:grid-cols-8">
             {industries.map((industry, i) => (
               <Reveal key={industry.label} index={i} direction="none">
                 <Link
                   href={`/industries/${industry.slug}`}
-                  className="group flex flex-col items-center gap-3 rounded-xl border border-slate-200 bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-blue/40 hover:shadow-md"
+                  className="group flex flex-col items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white p-5 text-center transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-blue/40 hover:shadow-md h-full"
                 >
                   <industry.icon className="h-6 w-6 text-navy transition-transform duration-300 group-hover:scale-125 group-hover:text-brand-blue" />
                   <span className="text-xs font-medium text-slate-600">

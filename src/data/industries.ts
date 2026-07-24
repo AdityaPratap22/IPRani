@@ -358,7 +358,7 @@ export const industries: Industry[] = [
     tier: "priority",
     tagline: "Industrial design protection, supplier contract compliance, and statutory clearances.",
     summary: "Contracts, IP enforcement and industrial design registration.",
-    overview: "Manufacturing companies require structured legal frameworks to manage factory operations, secure equipment designs, govern supply chains, and maintain environmental clearances. Operating multiple units demands strict compliance with labor and environmental laws, while custom product designs need protection from competitor duplication. We advise manufacturers on factory setup filings, vendor supply contracts, design registrations, and environmental law compliance.",
+    overview: "Manufacturing companies require structured legal frameworks to manage factory operations, secure equipment designs, govern supply chains, and maintain environmental clearances. Operating multiple units demands strict compliance with labour and environmental laws, while custom product designs need protection from competitor duplication. We advise manufacturers on factory setup filings, vendor supply contracts, design registrations, and environmental law compliance.",
     stats: [
       { value: "250+", label: "Industrial designs successfully registered and defended" },
       { value: "100%", label: "Environmental clearance audit success rate" },
@@ -375,8 +375,8 @@ export const industries: Industry[] = [
         description: "Failing to obtain or renew Consent to Establish (CTE) and Consent to Operate (CTO) from State Pollution Control Boards leads to immediate plant closure orders."
       },
       {
-        title: "Labor Law Compliance",
-        description: "Navigating state-specific factory regulations, contract labor laws, and safety compliance without robust documentation can trigger audits and shut downs."
+        title: "Labour Law Compliance",
+        description: "Navigating state-specific factory regulations, contract labour laws, and safety compliance without robust documentation can trigger audits and shut downs."
       },
       {
         title: "Supply Chain Disruptions",
@@ -402,7 +402,7 @@ export const industries: Industry[] = [
       {
         step: 4,
         title: "Factory Compliance Audit",
-        description: "Perform comprehensive audits of labor registrations, safety logs, and statutory reporting under state laws."
+        description: "Perform comprehensive audits of labour registrations, safety logs, and statutory reporting under state laws."
       },
       {
         step: 5,
@@ -424,7 +424,7 @@ export const industries: Industry[] = [
     ],
     complianceFramework: [
       "Factories Act, 1948 and state factory rules",
-      "Industrial Disputes Act and labor welfare legislations",
+      "Industrial Disputes Act and labour welfare legislations",
       "State pollution control board clearances (CTE/CTO under Air and Water Acts)",
       "Contract Labour (Regulation & Abolition) Act, 1970 registrations",
       "Environment Protection Act, 1986 statutory compliance rules"
@@ -882,7 +882,7 @@ export const industries: Industry[] = [
       "Draft detailed project delivery milestones, escalation clauses, and delay penalty frames in construction agreements.",
       "Maintain absolute transparency in project funding accounts and register all buyer agreements under RERA.",
       "Ensure all land sales agreements are stamped and registered to create legal title.",
-      "Perform periodic audits of factory and labor safety standards at construction sites."
+      "Perform periodic audits of factory and labour safety standards at construction sites."
     ],
     faqs: [
       {
