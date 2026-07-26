@@ -11,28 +11,28 @@ const slides = [
   },
   {
     title: "Patent",
-    image: "/service-patent.jpg",
-    alt: "Engineer reviewing patent drawings and R&D technology specifications",
+    image: "/law-books-gavel.jpg",
+    alt: "Law books and judge gavel on lawyer mahogany desk for patent registration and prosecution",
   },
   {
     title: "Trademark",
-    image: "/service-trademark.jpg",
-    alt: "Corporate executive reviewing brand identity and trademark filing strategy",
+    image: "/hero-trademark-law.jpg",
+    alt: "Golden scales of justice, judge gavel, open law books, and trademark registration certificate on mahogany desk",
   },
   {
     title: "Copyright",
-    image: "/service-copyright.jpg",
-    alt: "Creative media production and digital copyright management workspace",
+    image: "/law-library-lady.jpg",
+    alt: "Lady Justice statue, scales of justice, and law volumes for copyright protection and ownership",
   },
   {
     title: "Design",
-    image: "/service-design.jpg",
-    alt: "Industrial design sketching, CAD drawings, and product drafting workbench",
+    image: "/hero-design-law.jpg",
+    alt: "Brass justice scale, judge gavel, stacked legal case files, and formal sealed documents on courtroom table",
   },
   {
     title: "IP & Commercial Litigation",
-    image: "/service-litigation.jpg",
-    alt: "Advocate team and legal literature in a modern law library setting",
+    image: "/law-gavel-scales.jpg",
+    alt: "Classical judge gavel and scales of justice in court setting for commercial litigation and dispute resolution",
   },
 ];
 
