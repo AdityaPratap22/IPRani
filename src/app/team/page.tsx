@@ -87,11 +87,11 @@ export default function TeamPage() {
                   href={`/team/${member.slug}`}
                   className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white text-center shadow-sm transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
-                  <div className="overflow-hidden">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="h-96 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                      className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-6">

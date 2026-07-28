@@ -50,11 +50,13 @@ export default async function TeamMemberPage({
           <Reveal inView={false} className="lg:col-span-2 space-y-10">
             {/* Photo + Quick Stats */}
             <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
-              <img
-                src={data.image}
-                alt={data.name}
-                className="h-[450px] w-full max-w-sm shrink-0 rounded-2xl object-cover object-top shadow-md transition-transform duration-500 hover:scale-[1.03]"
-              />
+              <div className="w-full max-w-sm shrink-0">
+                <img
+                  src={data.image}
+                  alt={data.name}
+                  className="aspect-[3/4] w-full rounded-2xl object-cover object-top shadow-md transition-transform duration-500 hover:scale-[1.03]"
+                />
+              </div>
               <div className="flex flex-col justify-center">
                 <h2 className="text-2xl font-bold text-navy">{data.name}</h2>
                 <p className="mt-1 text-sm font-semibold text-brand-blue">

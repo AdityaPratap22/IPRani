@@ -112,6 +112,38 @@ export default function ToolsPage() {
                   </div>
                 </a>
                 <a
+                  href="https://search.ipindia.gov.in/DesignApplicationStatus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-3.5 rounded-xl border border-slate-100 bg-slate-50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:bg-white hover:shadow-sm"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal font-bold text-sm">
+                    📐
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-semibold text-navy group-hover:text-brand-blue flex items-center gap-1.5">
+                      Design Status Check <span className="text-xs transition-transform group-hover:translate-x-1">→</span>
+                    </h4>
+                    <p className="mt-1 text-xs text-slate-500">Track real-time application status of your industrial design registration in India.</p>
+                  </div>
+                </a>
+                <a
+                  href="https://www.wipo.int/en/web/classification-locarno"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start gap-3.5 rounded-xl border border-slate-100 bg-slate-50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-brand-blue/20 hover:bg-white hover:shadow-sm"
+                >
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-teal-50 text-teal font-bold text-sm">
+                    🎨
+                  </span>
+                  <div>
+                    <h4 className="text-sm font-semibold text-navy group-hover:text-brand-blue flex items-center gap-1.5">
+                      Design Class Finder (Locarno) <span className="text-xs transition-transform group-hover:translate-x-1">→</span>
+                    </h4>
+                    <p className="mt-1 text-xs text-slate-500">Search WIPO Locarno classification to identify appropriate design categories for your product.</p>
+                  </div>
+                </a>
+                <a
                   href="https://ipindia.gov.in/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -133,7 +165,7 @@ export default function ToolsPage() {
             {/* Column 3: Supreme Court & Important Links */}
             <Reveal inView={false} direction="up" delay={0.1} className="rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:shadow-lg">
               <h3 className="text-lg font-bold text-navy border-b border-slate-100 pb-3 flex items-center gap-2">
-                <span className="text-red-600 font-semibold">⚖️</span> Supreme Court &amp; Links
+                <span className="text-red-600 font-semibold">⚖️</span> Hon'ble Supreme Court of India &amp; Links
               </h3>
               <div className="mt-5 space-y-4">
                 <a
@@ -147,7 +179,7 @@ export default function ToolsPage() {
                   </span>
                   <div>
                     <h4 className="text-sm font-semibold text-navy group-hover:text-brand-blue flex items-center gap-1.5">
-                      Supreme Court of India <span className="text-xs transition-transform group-hover:translate-x-1">→</span>
+                      Hon'ble Supreme Court of India <span className="text-xs transition-transform group-hover:translate-x-1">→</span>
                     </h4>
                     <p className="mt-1 text-xs text-slate-500">Access judgments, daily orders, cause lists, and case statuses of the highest court of India.</p>
                   </div>

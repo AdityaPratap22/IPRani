@@ -186,7 +186,7 @@ export const serviceVerticals: ServiceVertical[] = [
       "Our Corporate Legal practice covers company formation, contract drafting and ROC compliance — the legal essentials every growing business needs in place.",
     hubs: [
       {
-        name: "Commercial",
+        name: "Commercial / Contract Drafting",
         slug: "commercial",
         summary: "Commercial contract drafting, corporate advisory, legal due diligence, and regulatory compliance.",
         description:

@@ -9,6 +9,8 @@ import { industries } from "@/data/industries";
 import { clusters } from "@/data/knowledgeCenter";
 import { ArrowRightIcon } from "@/components/icons";
 import TrademarkProcessFlowchart from "@/components/TrademarkProcessFlowchart";
+import PatentProcessFlowchart from "@/components/PatentProcessFlowchart";
+import RequirementsSection from "@/components/RequirementsSection";
 
 export function generateStaticParams() {
   return serviceVerticals.flatMap((v) =>
@@ -104,9 +106,17 @@ export default async function HubPage({
             </p>
           )}
 
+          <RequirementsSection hubSlug={hubData.slug} />
+
           {hubData.slug === "trademark" && (
             <div className="mt-16">
               <TrademarkProcessFlowchart />
+            </div>
+          )}
+
+          {hubData.slug === "patent" && (
+            <div className="mt-16">
+              <PatentProcessFlowchart />
             </div>
           )}
 
