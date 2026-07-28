@@ -192,16 +192,24 @@ export const serviceVerticals: ServiceVertical[] = [
         description:
           "Our Commercial practice provides end-to-end support for contract drafting, review, corporate advisory, secretarial governance, legal due diligence, and transaction risk assessment.",
         subServices: [
-          leaf("Contract Drafting & Documentation", "contract-drafting-documentation", "Commercial", "Corporate Legal"),
-          leaf("Contract Review & Negotiation", "contract-review-negotiation", "Commercial", "Corporate Legal"),
-          leaf("Commercial Agreements", "commercial-agreements", "Commercial", "Corporate Legal"),
-          leaf("Corporate Advisory", "corporate-advisory", "Commercial", "Corporate Legal"),
-          leaf("Corporate Governance & Secretarial Advisory", "corporate-governance-secretarial-advisory", "Commercial", "Corporate Legal"),
-          leaf("Legal Due Diligence", "legal-due-diligence", "Commercial", "Corporate Legal"),
-          leaf("Regulatory & Compliance Advisory", "regulatory-compliance-advisory", "Commercial", "Corporate Legal"),
-          leaf("Startup & Business Advisory", "startup-business-advisory", "Commercial", "Corporate Legal"),
-          leaf("Legal Opinions & Advisory", "legal-opinions-advisory", "Commercial", "Corporate Legal"),
-          leaf("Transaction Support & Risk Assessment", "transaction-support-risk-assessment", "Commercial", "Corporate Legal"),
+          leaf("NDA Drafting", "nda", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Founders Agreement", "founders-agreement", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Vendor Agreement", "vendor-agreement", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Master Service Agreement (MSA)", "msa", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("SaaS Agreement", "saas-agreement", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Employment Contract", "employment-contract", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Licensing Agreement", "licensing-agreement", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Terms & Conditions / Privacy Policy", "terms-privacy-policy", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Contract Drafting & Documentation", "contract-drafting-documentation", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Contract Review & Negotiation", "contract-review-negotiation", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Commercial Agreements", "commercial-agreements", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Corporate Advisory", "corporate-advisory", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Corporate Governance & Secretarial Advisory", "corporate-governance-secretarial-advisory", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Legal Due Diligence", "legal-due-diligence", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Regulatory & Compliance Advisory", "regulatory-compliance-advisory", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Startup & Business Advisory", "startup-business-advisory", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Legal Opinions & Advisory", "legal-opinions-advisory", "Commercial / Contract Drafting", "Corporate Legal"),
+          leaf("Transaction Support & Risk Assessment", "transaction-support-risk-assessment", "Commercial / Contract Drafting", "Corporate Legal"),
         ],
       },
       {
@@ -217,23 +225,6 @@ export const serviceVerticals: ServiceVertical[] = [
           leaf("Section 8 Company Registration", "section-8-company", "Company Formation", "Corporate Legal"),
           leaf("Partnership Firm Registration", "partnership-firm-registration", "Company Formation", "Corporate Legal"),
           leaf("Startup India Registration", "startup-india-registration", "Company Formation", "Corporate Legal"),
-        ],
-      },
-      {
-        name: "Contract Drafting",
-        slug: "contract-drafting",
-        summary: "Clear, enforceable contracts for every stage of your business.",
-        description:
-          "We draft and review the contracts that hold your business relationships together, from founder agreements to customer terms.",
-        subServices: [
-          leaf("NDA Drafting", "nda", "Contract Drafting", "Corporate Legal"),
-          leaf("Founders Agreement", "founders-agreement", "Contract Drafting", "Corporate Legal"),
-          leaf("Vendor Agreement", "vendor-agreement", "Contract Drafting", "Corporate Legal"),
-          leaf("Master Service Agreement (MSA)", "msa", "Contract Drafting", "Corporate Legal"),
-          leaf("SaaS Agreement", "saas-agreement", "Contract Drafting", "Corporate Legal"),
-          leaf("Employment Contract", "employment-contract", "Contract Drafting", "Corporate Legal"),
-          leaf("Licensing Agreement", "licensing-agreement", "Contract Drafting", "Corporate Legal"),
-          leaf("Terms & Conditions / Privacy Policy", "terms-privacy-policy", "Contract Drafting", "Corporate Legal"),
         ],
       },
       {
@@ -337,8 +328,9 @@ export function findVertical(slug: string) {
 }
 
 export function findHub(verticalSlug: string, hubSlug: string) {
+  const targetHub = hubSlug === "contract-drafting" ? "commercial" : hubSlug;
   const vertical = findVertical(verticalSlug);
-  const hub = vertical?.hubs.find((h) => h.slug === hubSlug);
+  const hub = vertical?.hubs.find((h) => h.slug === targetHub);
   return vertical && hub ? { vertical, hub } : undefined;
 }
 
@@ -355,6 +347,6 @@ export const topServiceLinks = [
   { label: "Trademark", href: "/services/intellectual-property/trademark/filing-drafting" },
   { label: "Copyright", href: "/services/intellectual-property/copyright/registration" },
   { label: "Design", href: "/services/intellectual-property/design/drafting-filing" },
-  { label: "Company Formation", href: "/services/corporate-legal/company-formation/private-limited-company" },
+  { label: "Contract Drafting", href: "/services/corporate-legal/commercial/contract-drafting-documentation" },
   { label: "Litigation", href: "/services/litigation" },
 ];

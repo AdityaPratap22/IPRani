@@ -47,7 +47,7 @@ export const team: TeamMember[] = [
     image: "/team/sushant-shekhar.jpg",
     bio: "Sushant Shekhar is the Co-Founder of IP Rani and a formidable litigation specialist with deep expertise in banking and financial recovery law. Armed with an LL.M and over a decade of courtroom experience since 2012, he has personally handled more than 3,500 bank recovery cases across DRT, DRAT, and NCLT forums — establishing himself as one of the most prolific banking litigators in the practice.",
     extendedBio:
-      "Sushant Shekhar is the Co-Founder of IP Rani and the firm's foremost authority on banking litigation, financial recovery, and insolvency law. Enrolled as an advocate with the Bar Council of India in 2012, he holds an LL.M in addition to his B.A. LL.B degree, bringing both rigorous academic grounding and relentless courtroom tenacity to every matter he undertakes.\n\nHis career has been defined by an extraordinary volume and complexity of banking and financial recovery litigation. To date, he has personally handled more than 3,500 cases on behalf of leading public and private sector banks, non-banking financial companies (NBFCs), and asset reconstruction companies (ARCs). His practice spans the full gamut of recovery mechanisms available under Indian law — from filing Original Applications (OAs) under the Recovery of Debts and Bankruptcy Act, 1993 before Debt Recovery Tribunals (DRT), to pursuing appeals before Debt Recovery Appellate Tribunals (DRAT), and initiating insolvency resolution processes under the Insolvency and Bankruptcy Code, 2016 before the National Company Law Tribunal (NCLT).\n\nMr. Shekhar has developed particularly deep expertise in enforcement proceedings under the SARFAESI Act, 2002, including Section 13(2) demand notices, symbolic and physical possession actions under Section 14, and auction and sale proceedings under Rule 8 and Rule 9 of the Security Interest (Enforcement) Rules, 2002. He regularly advises secured creditors on the strategic sequencing of recovery remedies, choosing between SARFAESI enforcement, DRT proceedings, and NCLT insolvency based on the specific facts and commercial objectives of each case.\n\nBeyond banking litigation, he handles complex commercial disputes involving breach of contract, tortious claims, corporate fraud, and shareholder oppression. His insolvency practice extends to representing both creditors and corporate debtors in resolution processes, liquidation proceedings, and avoidance actions.\n\nAs a Registered IP Attorney and Official SIPP Facilitator, he also contributes to the firm's broader intellectual property practice, leveraging his litigation expertise to handle IP enforcement actions and infringement disputes in court.",
+      "Sushant Shekhar is the Co-Founder of IP Rani and the firm's foremost authority on banking litigation, financial recovery, and insolvency law. Enrolled as an advocate with the Bar Council of India in 2012, he holds an LL.M in addition to his B.COM LL.B degree, bringing both rigorous academic grounding and relentless courtroom tenacity to every matter he undertakes.\n\nHis career has been defined by an extraordinary volume and complexity of banking and financial recovery litigation. To date, he has personally handled more than 3,500 cases on behalf of leading public and private sector banks, non-banking financial companies (NBFCs), and asset reconstruction companies (ARCs). His practice spans the full gamut of recovery mechanisms available under Indian law — from filing Original Applications (OAs) under the Recovery of Debts and Bankruptcy Act, 1993 before Debt Recovery Tribunals (DRT), to pursuing appeals before Debt Recovery Appellate Tribunals (DRAT), and initiating insolvency resolution processes under the Insolvency and Bankruptcy Code, 2016 before the National Company Law Tribunal (NCLT).\n\nMr. Shekhar has developed particularly deep expertise in enforcement proceedings under the SARFAESI Act, 2002, including Section 13(2) demand notices, symbolic and physical possession actions under Section 14, and auction and sale proceedings under Rule 8 and Rule 9 of the Security Interest (Enforcement) Rules, 2002. He regularly advises secured creditors on the strategic sequencing of recovery remedies, choosing between SARFAESI enforcement, DRT proceedings, and NCLT insolvency based on the specific facts and commercial objectives of each case.\n\nBeyond banking litigation, he handles complex commercial disputes involving breach of contract, tortious claims, corporate fraud, and shareholder oppression. His insolvency practice extends to representing both creditors and corporate debtors in resolution processes, liquidation proceedings, and avoidance actions.\n\nAs a Registered IP Attorney and Official SIPP Facilitator, he also contributes to the firm's broader intellectual property practice, leveraging his litigation expertise to handle IP enforcement actions and infringement disputes in court.",
     focus: ["Banking & Recovery Litigation", "Commercial Disputes", "DRT & DRAT Proceedings", "NCLT & Insolvency Matters"],
     highlights: [
       { label: "Bank Cases", value: "3500+" },
@@ -57,7 +57,7 @@ export const team: TeamMember[] = [
     ],
     qualifications: [
       "LL.M",
-      "B.A. LL.B",
+      "B.COM LL.B",
       "Registered Trademark Attorney",
       "Official SIPP Facilitator",
       "Enrolled Advocate (2012) — Bar Council of India",
@@ -86,7 +86,7 @@ export const team: TeamMember[] = [
     ],
     qualifications: [
       "B.A. LL.B",
-      "Registered Trademark Attorney",
+      "Registered IP Attorney",
       "Official SIPP Facilitator",
       "Enrolled Advocate (2022) — Bar Council of India",
     ],
@@ -173,17 +173,17 @@ export const team: TeamMember[] = [
   {
     name: "Vaibhav",
     slug: "vaibhav",
-    role: "Patent Attorney & SIPP Facilitator",
+    role: "Senior Associate — Patent Attorney & SIPP Facilitator",
     image: "/team/vaibhav.jpg",
-    bio: "Vaibhav is a Registered Patent Attorney and Official SIPP Facilitator who forms the backbone of IP Rani's patent prosecution and advisory practice. He brings deep technical and legal expertise to every stage of the patent lifecycle — from conducting exhaustive prior art searches across WIPO, EPO, USPTO, and Indian Patent Office databases, to drafting strategically crafted specifications, preparing detailed FER responses, representing clients in examiner hearings, and delivering comprehensive Freedom to Operate (FTO) risk analyses.",
+    bio: "Vaibhav is a Senior Associate, Registered Patent Attorney, and Official SIPP Facilitator who forms the backbone of IP Rani's patent prosecution and advisory practice. He brings deep technical and legal expertise to every stage of the patent lifecycle — from conducting exhaustive prior art searches across WIPO, EPO, USPTO, and Indian Patent Office databases, to drafting strategically crafted specifications, preparing detailed FER responses, representing clients in examiner hearings, and delivering comprehensive Freedom to Operate (FTO) risk analyses.",
     extendedBio:
-      "Vaibhav is a Registered Patent Attorney and Official SIPP Facilitator at IP Rani, serving as the primary architect of the firm's patent prosecution, search, and advisory practice. His unique combination of technical domain knowledge and deep familiarity with Indian and international patent law makes him the firm's go-to expert for all patent-related matters.\n\nAt the pre-filing stage, Vaibhav conducts exhaustive patentability assessments and prior art searches across the world's major patent databases — including WIPO's PATENTSCOPE, the European Patent Office's Espacenet, the United States Patent and Trademark Office's (USPTO) full-text database, Google Patents, and the Indian Patent Office's InPASS system. His searches are methodically structured to evaluate the novelty, inventive step (non-obviousness), and industrial applicability of client inventions against the existing state of the art, providing clients with a clear picture of patentability before committing to the filing process.\n\nOnce an invention clears the patentability assessment, Vaibhav drafts complete and provisional patent specifications that are strategically crafted to maximize claim scope while maintaining full compliance with the Patents Act, 1970 and Patent Rules, 2003. His specifications are known for their precision in technical description, breadth in independent claims, and defensibility under examination — qualities that significantly improve the probability of patent grant and reduce the need for narrowing amendments during prosecution.\n\nPost-filing, Vaibhav manages the critical prosecution phase with meticulous care. When the Indian Patent Office issues First Examination Reports (FER) raising objections on grounds of novelty, inventive step, sufficiency of disclosure, or prior art conflicts, he prepares comprehensive and legally rigorous responses that address each objection point-by-point. His replies combine detailed technical arguments with citations to relevant case law, patent office guidelines, and Manual of Patent Office Practice and Procedure (MPPP) provisions. He also represents clients in examiner hearings before the Patent Office, advocating for claim allowance and navigating the complex interplay of prior art objections, claim amendments, and controller directions.\n\nVaibhav's Freedom to Operate (FTO) analysis practice is particularly valued by manufacturing companies, technology startups, and R&D-intensive organizations that need to commercialize products or processes without risking infringement of third-party patent rights. His FTO reports map the client's product features against active patent claims in the relevant jurisdiction, identify potential infringement risks, and recommend design-around strategies or licensing pathways where necessary.\n\nAs an Official SIPP Facilitator, he also works closely with academic institutions, universities, and government-supported research bodies to facilitate patent filings under the Scheme for Facilitating Start-Ups Intellectual Property Protection (SIPP), ensuring that cutting-edge research from Indian academia receives the intellectual property protection it deserves.",
+      "Vaibhav is a Senior Associate, Registered Patent Attorney, and Official SIPP Facilitator at IP Rani, serving as the primary architect of the firm's patent prosecution, search, and advisory practice. His unique combination of technical domain knowledge and deep familiarity with Indian and international patent law makes him the firm's go-to expert for all patent-related matters.\n\nAt the pre-filing stage, Vaibhav conducts exhaustive patentability assessments and prior art searches across the world's major patent databases — including WIPO's PATENTSCOPE, the European Patent Office's Espacenet, the United States Patent and Trademark Office's (USPTO) full-text database, Google Patents, and the Indian Patent Office's InPASS system. His searches are methodically structured to evaluate the novelty, inventive step (non-obviousness), and industrial applicability of client inventions against the existing state of the art, providing clients with a clear picture of patentability before committing to the filing process.\n\nOnce an invention clears the patentability assessment, Vaibhav drafts complete and provisional patent specifications that are strategically crafted to maximize claim scope while maintaining full compliance with the Patents Act, 1970 and Patent Rules, 2003. His specifications are known for their precision in technical description, breadth in independent claims, and defensibility under examination — qualities that significantly improve the probability of patent grant and reduce the need for narrowing amendments during prosecution.\n\nPost-filing, Vaibhav manages the critical prosecution phase with meticulous care. When the Indian Patent Office issues First Examination Reports (FER) raising objections on grounds of novelty, inventive step, sufficiency of disclosure, or prior art conflicts, he prepares comprehensive and legally rigorous responses that address each objection point-by-point. His replies combine detailed technical arguments with citations to relevant case law, patent office guidelines, and Manual of Patent Office Practice and Procedure (MPPP) provisions. He also represents clients in examiner hearings before the Patent Office, advocating for claim allowance and navigating the complex interplay of prior art objections, claim amendments, and controller directions.\n\nVaibhav's Freedom to Operate (FTO) analysis practice is particularly valued by manufacturing companies, technology startups, and R&D-intensive organizations that need to commercialize products or processes without risking infringement of third-party patent rights. His FTO reports map the client's product features against active patent claims in the relevant jurisdiction, identify potential infringement risks, and recommend design-around strategies or licensing pathways where necessary.\n\nAs an Official SIPP Facilitator, he also works closely with academic institutions, universities, and government-supported research bodies to facilitate patent filings under the Scheme for Facilitating Start-Ups Intellectual Property Protection (SIPP), ensuring that cutting-edge research from Indian academia receives the intellectual property protection it deserves.",
     focus: ["Patent Searching & Prior Art Analysis", "Patent Drafting & Prosecution", "FER Replies & Registry Hearings", "Freedom to Operate (FTO)"],
     highlights: [
+      { label: "Designation", value: "Senior Associate" },
       { label: "Role", value: "Patent Attorney" },
       { label: "Status", value: "Registered Patent Attorney" },
       { label: "SIPP", value: "SIPP Facilitator" },
-      { label: "Specialty", value: "Patent & FTO" },
     ],
     qualifications: [
       "Registered Patent Attorney",
@@ -196,6 +196,55 @@ export const team: TeamMember[] = [
       "Patent Registry Hearings & Controller Representations",
       "Freedom to Operate (FTO) Analysis & Risk Advisory",
       "IP Portfolio Management & Strategy",
+    ],
+  },
+  {
+    name: "Pooja",
+    slug: "pooja",
+    role: "Senior Associate — Criminal & Banking Litigation",
+    image: "/team/pooja.jpg",
+    bio: "Pooja is a Senior Associate at IP Rani specializing in Criminal & Banking Litigation. She brings extensive courtroom experience across criminal defence, financial recovery suits, Section 138 NI Act litigation, and banking matters before district courts, DRT, and appellate forums.",
+    extendedBio:
+      "Pooja is a Senior Associate at IP Rani and a key pillar of the firm's criminal litigation and banking recovery practice. She brings sharp legal acumen and strategic courtroom representation to criminal matters and banking disputes.\n\nHer criminal litigation practice spans criminal defence and prosecution across Indian trial courts and sessions courts. She regularly handles matters involving cheque bounce cases under Section 138 of the Negotiable Instruments Act, criminal breach of trust, cheating, and bail applications.\n\nIn the banking domain, Pooja represents banks, financial institutions, and corporate clients in recovery proceedings, Debt Recovery Tribunal (DRT) litigation, and corporate debt disputes. Her combined expertise in criminal law and banking recovery allows her to provide comprehensive legal strategy for clients.",
+    focus: ["Criminal Litigation & Defence", "Banking & Financial Recovery"],
+    highlights: [
+      { label: "Designation", value: "Senior Associate" },
+      { label: "Specialty", value: "Criminal & Banking" },
+      { label: "Forums", value: "District Courts & DRT" },
+    ],
+    qualifications: [
+      "LL.B",
+      "Enrolled Advocate — Bar Council of India",
+    ],
+    services: [
+      "Criminal Defence & Trial Advocacy",
+      "Negotiable Instruments & Sec 138 Litigation",
+      "Banking & Recovery Proceedings",
+      "DRT & Financial Dispute Litigation",
+    ],
+  },
+  {
+    name: "Prachi",
+    slug: "prachi",
+    role: "Associate Advocate",
+    image: "/team/prachi.jpg",
+    bio: "Prachi is an Associate Advocate at IP Rani supporting the firm's intellectual property prosecution and general legal practice. She assists senior counsel with legal research, case preparation, registry documentation, and client advisory.",
+    extendedBio:
+      "Prachi is an Associate Advocate at IP Rani. Enrolled as an advocate with the Bar Council of India, she contributes to the firm's intellectual property prosecution, corporate advisory, and litigation support teams.\n\nIn her role as an associate, Prachi assists in drafting trademark and patent applications, preparing examination report replies, conducting comprehensive legal research, and managing case documentation. She works closely with senior partners during client consultations and courtroom hearings, ensuring that all procedural and statutory compliance requirements are met efficiently.",
+    focus: ["IP Prosecution Support", "Legal Research & Drafting", "Corporate Advisory Support"],
+    highlights: [
+      { label: "Designation", value: "Associate Advocate" },
+      { label: "Focus", value: "IP & Legal Support" },
+    ],
+    qualifications: [
+      "LL.B",
+      "Enrolled Advocate — Bar Council of India",
+    ],
+    services: [
+      "Trademark & IP Filing Support",
+      "Legal Research & Case Brief Preparation",
+      "Registry Compliance & Documentation",
+      "Client Advisory Support",
     ],
   },
 ];

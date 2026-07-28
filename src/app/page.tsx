@@ -216,22 +216,64 @@ const whyUs = [
 
 const reviews = [
   {
-    name: "Aditya Sharma",
+    name: "N.D. Care Nirogam",
+    role: "Management",
+    company: "N.D. Care Nirogam Pvt. Ltd.",
+    content: "Professional advice, timely updates, and seamless execution. Highly satisfied with IP RANI's trademark and copyright services.",
+  },
+  {
+    name: "Aryen Kaushik",
+    role: "Assistant Professor",
+    company: "Academic & Researcher",
+    content: "I thoroughly loved working with the team for my design patent. Highly recommended!",
+  },
+  {
+    name: "Zishan Khan",
     role: "Founder",
-    company: "D2C Skincare Brand",
-    content: "IP Rani made our trademark clearance and filing completely seamless. We had a competitor try to copy our packaging design, but thanks to their team registering our design beforehand, we resolved the dispute in days. Absolute lifesaver for D2C founders!",
+    company: "Nacky Snacky",
+    content: "Excellent experience. The advocate was very professional, knowledgeable, and guided me properly throughout the entire process. Work was completed smoothly and on time.",
   },
   {
-    name: "Sneha Iyer",
-    role: "CTO",
-    company: "SaaS Tech Venture",
-    content: "As a fast-growing tech startup, safeguarding our proprietary algorithms and patent portfolios was critical. The patent agents at IP Rani did an exceptional job drafting our patent applications and guiding us through the PCT international filing process.",
+    name: "Su-vastika Systems",
+    role: "Management",
+    company: "Su-vastika Systems Pvt. Ltd.",
+    content: "Registering our product design was a smooth experience with IP RANI. The team paid attention to every detail and completed the filing efficiently. We truly appreciate their expertise and prompt communication.",
   },
   {
-    name: "Vikram Goel",
-    role: "Director",
-    company: "Goel Manufacturing Ind.",
-    content: "We have worked with IP Rani for all our statutory compliance, vendor contract agreements, and industrial design protection. Their legal knowledge and responsive support have made them our trusted long-term legal partner.",
+    name: "Deepak Menon",
+    role: "Management",
+    company: "Elvora Hospitality",
+    content: "Loved the experience. Best attorneys. Really helping, efficient work. Must hire!",
+  },
+  {
+    name: "First Diet Morning Food",
+    role: "Management",
+    company: "First Diet Morning Food Product Pvt. Ltd.",
+    content: "A trustworthy firm for brand protection. Smooth process and excellent communication.",
+  },
+  {
+    name: "Jadu Health Care",
+    role: "Management",
+    company: "Jadu Health Care Pvt. Ltd.",
+    content: "Fast, reliable, and transparent service. Great experience from filing to publication.",
+  },
+  {
+    name: "Dominant Planet Media",
+    role: "Management",
+    company: "Dominant Planet Media (OPC) Pvt. Ltd.",
+    content: "A dependable team for protecting creative work. Fast and transparent service.",
+  },
+  {
+    name: "Airtech",
+    role: "Management",
+    company: "Airtech Pvt. Ltd.",
+    content: "Very satisfied with the quality of service and professionalism shown by the team.",
+  },
+  {
+    name: "Nutrason Bioscience",
+    role: "Management",
+    company: "Nutrason Bioscience Pvt. Ltd.",
+    content: "Excellent work.",
   },
 ];
 
@@ -479,8 +521,8 @@ export default function Home() {
 
       <ImpactStats />
 
-      <section className="bg-bg-light-2 px-4 py-16 sm:px-6 lg:px-8 border-t border-slate-100">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-bg-light-2 py-16 border-t border-slate-100 overflow-hidden">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Reveal direction="down">
               <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand-blue">
@@ -495,14 +537,14 @@ export default function Home() {
               <div className="mx-auto mt-4 h-[2px] w-24 bg-brand-blue/30" />
             </Reveal>
           </div>
+        </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {reviews.map((review, i) => (
-              <Reveal
-                key={review.name}
-                index={i}
-                direction="up"
-                className="flex flex-col justify-between rounded-2xl bg-white p-6 shadow-sm border border-slate-100 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-md"
+        <div className="mt-12 marquee-container w-full py-2">
+          <div className="marquee-content-reverse">
+            {[...reviews, ...reviews, ...reviews].map((review, i) => (
+              <div
+                key={`${review.name}-${i}`}
+                className="w-[360px] flex-shrink-0 flex flex-col justify-between rounded-2xl bg-white p-6 shadow-sm border border-slate-100 transition-all duration-300 hover:shadow-md hover:-translate-y-1"
               >
                 <div>
                   <div className="flex gap-1 text-amber-400">
@@ -526,7 +568,7 @@ export default function Home() {
                     {review.role}, <span className="font-medium text-brand-blue">{review.company}</span>
                   </p>
                 </div>
-              </Reveal>
+              </div>
             ))}
           </div>
         </div>

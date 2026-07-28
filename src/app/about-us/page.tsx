@@ -41,24 +41,44 @@ export default function AboutPage() {
 
       <section className="bg-white px-4 py-14 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-2">
-          <Reveal inView={false} direction="left">
-            <h2 className="text-3xl font-bold text-navy">
+          <Reveal inView={false} direction="left" className="space-y-3.5">
+            <h2 className="text-3xl font-bold text-navy leading-tight sm:text-4xl">
               We are a team of IP &amp; legal experts committed to protecting
               ideas and empowering businesses.
             </h2>
-            <p className="mt-4 text-sm text-slate-500">
-              IP Rani was founded with a simple mission — to protect and grow
-              businesses. From startups to established enterprises, we partner
-              with clients and offer end-to-end IP, corporate legal and
-              litigation support they can rely on and which lets them focus on
-              what matters most: growing their business.
+            <p className="text-sm text-slate-500 leading-relaxed">
+              IP Rani was established with a singular mission — to safeguard innovations, brands, and corporate assets across India and global jurisdictions. From ambitious startups and academic incubators to established corporate enterprises, we partner with clients as dedicated legal custodians so they can scale with complete peace of mind.
             </p>
+            <p className="text-sm text-slate-500 leading-relaxed">
+              Led by veteran advocates, registered IP attorneys, and official SIPP facilitators, our practice delivers end-to-end support across trademark clearance and prosecution, patent drafting, industrial designs, commercial contract drafting, and litigation before courts and specialized tribunals.
+            </p>
+            <p className="text-sm text-slate-500 leading-relaxed">
+              Whether securing your first brand registration, filing complex patent claims, or defending business interests in court, we combine deep legal expertise with transparent, result-oriented guidance at every stage of your business journey.
+            </p>
+            <div className="pt-1.5 grid grid-cols-2 gap-3 text-xs font-semibold text-navy">
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue font-bold text-[10px]">✓</span>
+                Full Lifecycle IP Protection
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue font-bold text-[10px]">✓</span>
+                High Court &amp; DRT Litigation
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue font-bold text-[10px]">✓</span>
+                Official SIPP Facilitators
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-brand-blue/10 text-brand-blue font-bold text-[10px]">✓</span>
+                Global Madrid &amp; PCT Filings
+              </div>
+            </div>
           </Reveal>
           <Reveal inView={false} direction="right">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
               alt="IP Rani office team working together"
-              className="h-80 w-full rounded-2xl object-cover shadow-md transition-transform duration-500 hover:scale-[1.03]"
+              className="h-[410px] w-full rounded-2xl object-cover shadow-md transition-transform duration-500 hover:scale-[1.02]"
             />
           </Reveal>
         </div>

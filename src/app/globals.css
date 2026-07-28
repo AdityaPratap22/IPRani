@@ -81,9 +81,6 @@ h1, h2, h3, h4, h5, h6 {
   user-select: none;
   position: relative;
   width: 100%;
-  /* Gradient mask for edge fade out */
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .marquee-content {
@@ -98,6 +95,28 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Pause marquee scroll animation on hover */
 .marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+/* Left-to-Right Scrolling Marquee Ticker */
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.marquee-content-reverse {
+  display: flex;
+  flex-shrink: 0;
+  align-items: stretch;
+  gap: 1.5rem;
+  animation: marquee-reverse 85s linear infinite;
+}
+
+.marquee-container:hover .marquee-content-reverse {
   animation-play-state: paused;
 }
 

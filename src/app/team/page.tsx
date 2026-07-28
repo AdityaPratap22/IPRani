@@ -73,42 +73,42 @@ export default function TeamPage() {
       </section>
 
       {/* Team Cards */}
-      <section className="bg-bg-light-2 px-4 py-14 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="bg-bg-light-2 px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl">
           <Reveal inView={false}>
-            <h2 className="mb-10 text-center text-2xl font-bold text-navy sm:text-3xl">
-              Our Leadership
+            <h2 className="mb-8 text-center text-2xl font-bold text-navy sm:text-3xl">
+              Our Leadership & Legal Team
             </h2>
           </Reveal>
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {team.map((member, i) => (
               <Reveal inView={false} key={member.slug} index={i}>
                 <Link
                   href={`/team/${member.slug}`}
-                  className="group block overflow-hidden rounded-2xl border border-slate-200 bg-white text-center shadow-sm transition-all duration-300 hover:scale-105 hover:-translate-y-2 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+                  className="group block h-full overflow-hidden rounded-xl border border-slate-200 bg-white text-center shadow-sm transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
                 >
-                  <div className="aspect-[3/4] overflow-hidden">
+                  <div className="aspect-[3/4] overflow-hidden bg-slate-100">
                     <img
                       src={member.image}
                       alt={member.name}
                       className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-navy group-hover:text-brand-blue">
+                  <div className="p-4">
+                    <h3 className="text-base font-bold text-navy group-hover:text-brand-blue">
                       {member.name}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-brand-blue">
+                    <p className="mt-0.5 text-xs font-semibold text-brand-blue">
                       {member.role}
                     </p>
-                    <p className="mt-3 text-xs leading-5 text-slate-500">
+                    <p className="mt-2 text-[11px] leading-relaxed text-slate-500 line-clamp-3">
                       {member.bio}
                     </p>
-                    <div className="mt-4 flex flex-wrap justify-center gap-1.5">
+                    <div className="mt-3 flex flex-wrap justify-center gap-1">
                       {member.focus.map((f) => (
                         <span
                           key={f}
-                          className="rounded-full bg-bg-light px-2.5 py-0.5 text-[11px] font-semibold text-navy"
+                          className="rounded-full bg-bg-light px-2 py-0.5 text-[10px] font-semibold text-navy"
                         >
                           {f}
                         </span>
