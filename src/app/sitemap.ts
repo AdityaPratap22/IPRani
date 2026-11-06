@@ -7,7 +7,7 @@ import { team } from "@/data/team";
 import { blogRegistry } from "@/data/blogs/_registry";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://iprani.in";
+  const baseUrl = "https://iprani.com";
 
   // 1. Static Pages
   const staticPages = [

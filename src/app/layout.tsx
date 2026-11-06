@@ -18,7 +18,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iprani.in"),
+  metadataBase: new URL("https://iprani.com"),
   title: {
     default: "IP Rani | IP & Legal Solutions for Businesses",
     template: "%s | IP Rani",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IP Rani | IP & Legal Solutions for Businesses",
     description: "End-to-end IP & Legal solutions for start-ups, enterprises and growing businesses.",
-    url: "https://iprani.in",
+    url: "https://iprani.com",
     siteName: "IP Rani",
     locale: "en_IN",
     type: "website",
@@ -88,8 +88,8 @@ export default function RootLayout({
               "@type": "LegalService",
               "name": "IP Rani",
               "alternateName": "IPRani",
-              "url": "https://iprani.in",
-              "logo": "https://iprani.in/logo.webp",
+              "url": "https://iprani.com",
+              "logo": "https://iprani.com/logo.webp",
               "sameAs": [
                 "https://wa.me/919911655010"
               ],
