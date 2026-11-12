@@ -12,6 +12,7 @@ export default function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   // Captcha State
   const [captcha, setCaptcha] = useState({ num1: 0, num2: 0, sum: 0 });
@@ -30,7 +31,7 @@ export default function ContactForm() {
     generateCaptcha();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     // Verify Captcha
@@ -41,10 +42,23 @@ export default function ContactForm() {
     }
 
     setIsSubmitting(true);
+    setSubmitError("");
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || "Failed to send message. Please try again.");
+      }
+
       setSubmitted(true);
       setFormData({
         name: "",
@@ -53,7 +67,14 @@ export default function ContactForm() {
         subject: "",
         message: "",
       });
-    }, 1200);
+    } catch (err: any) {
+      setSubmitError(
+        err.message || "Something went wrong. Please try again or reach us at ipr@iprani.com"
+      );
+      generateCaptcha();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -186,6 +207,12 @@ export default function ContactForm() {
           </p>
         )}
       </div>
+
+      {submitError && (
+        <div className="rounded-lg border border-red-200 bg-red-50 p-3.5 text-sm text-red-700" role="alert">
+          {submitError}
+        </div>
+      )}
 
       <button
         type="submit"
