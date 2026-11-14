@@ -24,18 +24,18 @@ type ContactGroup = {
 const contactInfo: ContactGroup[] = [
   {
     icon: PhoneIcon,
-    label: "Phone Support",
+    label: "Phone & WhatsApp Support",
     items: [
-      { text: "+91 99116 55010", note: "(General & IP)", href: "tel:+919911655010" },
-      { text: "+91 97588 67451", note: "(Legal)", href: "tel:+919758867451" },
+      { text: "+91 99116 55010", note: "(Calls & WhatsApp)", href: "https://wa.me/919911655010" },
+      { text: "+91 97588 67451", note: "(Legal Desk)", href: "tel:+919758867451" },
     ],
   },
   {
     icon: MailIcon,
-    label: "Email Address",
+    label: "Official Email Address",
     items: [
-      { text: "ipr@iprani.com", note: "(IP Matters)", href: "mailto:ipr@iprani.com" },
-      { text: "legal@iprani.com", note: "(Legal Matters)", href: "mailto:legal@iprani.com" },
+      { text: "ipr@iprani.com", note: "(Primary - All IP & General Queries)", href: "mailto:ipr@iprani.com" },
+      { text: "legal@iprani.com", note: "(Litigation & Legal Matters)", href: "mailto:legal@iprani.com" },
     ],
   },
   {
@@ -80,8 +80,10 @@ export default function ContactPage() {
               We&apos;d love to hear from you.
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              Let&apos;s discuss how we can help protect and grow your
-              business.
+              Connect with our IP &amp; legal specialists instantly on WhatsApp, or email us directly at{" "}
+              <a href="mailto:ipr@iprani.com" className="font-semibold text-brand-blue hover:underline">
+                ipr@iprani.com
+              </a>.
             </p>
           </Reveal>
 

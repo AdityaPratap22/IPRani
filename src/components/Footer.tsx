@@ -88,6 +88,18 @@ export default function Footer() {
             </p>
             <div className="mt-4 space-y-2.5 text-[11px] text-slate-400 max-w-sm leading-relaxed">
               <p>
+                <strong className="text-navy">Email:</strong>{" "}
+                <a href="mailto:ipr@iprani.com" className="font-semibold text-brand-blue hover:underline">
+                  ipr@iprani.com
+                </a>
+              </p>
+              <p>
+                <strong className="text-navy">Phone / WhatsApp:</strong>{" "}
+                <a href="https://wa.me/919911655010" target="_blank" rel="noopener noreferrer" className="font-semibold text-brand-blue hover:underline">
+                  +91 99116 55010
+                </a>
+              </p>
+              <p>
                 <strong className="text-navy">Corporate Office:</strong> 308/A15, Devika Chambers, RDC Rajnagar, Ghaziabad, U.P. – 201002, India.
               </p>
               <p>
